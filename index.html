@@ -36,7 +36,7 @@
     <p class="hero-description">
       Besoin d’un saxophoniste solaire et unique pour vos événements ?
     </p>
-    <a href="mailto:3maxi.dlg@gmail.com?subject=Réservation Hélion Sax&body=Bonjour,%0D%0AJe souhaite réserver Hélion Sax pour mon événement.%0D%0AMerci de me recontacter.%0D%0A" class="btn-reserve">Réserver</a>
+    <a href="#devis-contact" class="btn-reserve">Réserver</a>
 
   </div>
   <div class="hero-image">
@@ -131,16 +131,16 @@
 
 
 <!-- Contact -->
-<section class="contact">
-    <img src="images/elion-sax-soiree-privee.jpeg" alt="Hélion Sax contact">
-    <form action="mailto:3maxi.dlg@gmail.com" method="post" enctype="text/plain" class="contact-form">
-    <h2>Demandez un devis personnalisé</h2>
-    <input type="text" name="Nom" placeholder="Nom" required>
-    <input type="email" name="Email" placeholder="Email" required>
-    <textarea name="Message" placeholder="Votre message" required></textarea>
-    <button type="submit">Envoyer</button>
-</form>
-
+<section id="devis-contact" class="contact">
+    <img src="images/elion-sax-soiree-privee.jpeg" alt="Hélion Sax contact">
+    <!-- La balise action a été changée pour utiliser Formspree -->
+    <form action="https://formspree.io/f/xeopkaqg" method="POST" class="contact-form">
+    <h2>Demandez un devis personnalisé</h2>
+    <input type="text" name="Nom" placeholder="Nom" required>
+    <input type="email" name="Email" placeholder="Email" required>
+    <textarea name="Message" placeholder="Votre message" required></textarea>
+    <button type="submit">Envoyer</button>
+    </form>
 </section>
 
 <!-- Footer -->
