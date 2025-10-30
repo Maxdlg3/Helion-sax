@@ -1,3 +1,15 @@
+/* ================= Base Correction ================= */
+* {
+    /* Ceci est CRUCIAL pour le design responsive */
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family:'Arial', sans-serif; 
+    margin:0; 
+    padding:0; 
+    /* ... le reste de votre body ... */
+}
 /* ================= Base ================= */ 
 body { 
     font-family:'Arial', sans-serif; 
