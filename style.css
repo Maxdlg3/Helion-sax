@@ -563,7 +563,7 @@ footer .footer-social a:hover { transform:scale(1.3); }
 
 .vibe-video .iframe-container-vertical {
     width: 100%;
-    max-width: 420px; /* <-- VOTRE TAILLE DÉSIRÉE */
+    max-width: 360px; /* <-- VOTRE TAILLE DÉSIRÉE */
     border-radius: 20px; /* <-- VOTRE BORDURE */
     box-shadow: 0 12px 35px rgba(0,0,0,0.25); /* <-- VOTRE OMBRE */
     transition: transform 0.5s ease, box-shadow 0.5s ease;
