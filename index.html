@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<script src="https://cdn.tailwindcss.com"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Hélion Sax : Réservez un saxophoniste professionnel pour votre mariage, soirée privée ou événement d'entreprise à Paris. Ambiance Jazz, House, Afro. Devis rapide.">
@@ -125,46 +126,56 @@
 
 <!-- Vibe Section Luxe -->
  
-<section class="vibe-heliion-luxe">
+<section class="vibe-heliion-luxe max-w-6xl mx-auto">
   <h2 class="section-title">La Vibe Hélion Sax : Jazz, House & Événements</h2>
 
+  <!-- 
+    PREMIÈRE RANGÉE : VIDÉO VERTICALE (9:16)
+  -->
   <div class="vibe-row flex flex-col md:flex-row gap-8 items-center mb-16 border-b pb-8">
-    <div class="vibe-text">
+    <div class="vibe-text md:w-1/2 space-y-4">
       <h3>Scènes parisiennes & Événementiel haut de gamme</h3>
       <p>Du mythique <span>Caveau de la Huchette</span>, berceau du <span>jazz parisien</span> aux clubs les plus branchés comme <span>Le Solum</span>, en passant par des restaurants festifs comme <span>Red Katz</span>, Hélion Sax s’est forgé une <span>identité unique</span> : un artiste capable de <span>sublimer mariages, événements d’entreprise et soirées privées</span> avec des performances live à la fois élégantes et vibrantes.</p>
       <p>Il est également passé par des émissions prestigieuses comme <span>La France a un Incroyable Talent</span>, des festivals comme <span>Les Locomotives Normandes</span> et de nombreux <span>happenings exclusifs</span>.</p>
       <p>Son univers, à la croisée du <span>jazz, house et funk</span>, s’adresse à ceux qui recherchent une <span>ambiance raffinée, solaire et inoubliable</span>.</p>
     </div>
-<div class="vibe-video">
-    <!-- J'ai ajouté le conteneur pour le responsive, comme dans le fichier index.html -->
-    <div class="iframe-container-fixe">
-        <iframe
+    <div class="vibe-video md:w-1/2 w-full flex justify-center">
+      <!-- 
+        CONTENEUR VERTICAL (9:16)
+        - 'aspect-[9/16]' force le ratio 9:16
+        - 'max-w-[360px]' limite la largeur
+      -->
+      <div class="relative w-full aspect-[9/16] max-w-[360px] mx-auto rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            class="absolute top-0 left-0 w-full h-full"
             src="https://www.youtube.com/embed/SSJ2jmSnPd4?si=vTJDvNP5pm4KBHuV"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen>
-        </iframe>
+          </iframe>
+      </div>
     </div>
-</div>
+  </div>
 
+  <!-- 
+    DEUXIÈME RANGÉE : VIDÉO VERTICALE (9:16)
+  -->
   <div class="vibe-row reverse flex flex-col md:flex-row-reverse gap-8 items-center mb-16 border-b pb-8">
     
-    <div class="vibe-text md:w-1/2 text-gray-700 space-y-4">
+    <div class="vibe-text md:w-1/2 space-y-4">
         <h3>Luxe, Musique et Émotion</h3>
         <p>Le saxophone incarne <span>l’élégance et le raffinement</span>, deux valeurs au cœur de l’univers d’Hélion Sax.</p>
         <p>Habitué des <span>événements haut de gamme</span>, il a collaboré avec des maisons et agences de luxe telles que <span>Maison Kitsuné, Sézane ou Ba&amp;s</span>, ainsi que sur plusieurs défilés et soirées privées parisiennes.</p>
         <p>Toujours au contact du public, Hélion se déplace parmi les invités, créant une <span>connexion directe et immersive</span>.</p>
     </div>
     
-    <div class="vibe-video md:w-1/2 flex justify-center">
-        <!-- 
-        Le conteneur '.iframe-container-vertical' utilise votre CSS 
-        pour appliquer le max-width: 360px et le format 9:16.
-        -->
-        <div class="iframe-container-fixe">
+    <div class="vibe-video md:w-1/2 w-full flex justify-center">
+        <!-- Conteneur vertical -->
+        <div class="relative w-full aspect-[9/16] max-w-[360px] mx-auto rounded-lg overflow-hidden shadow-lg">
             <iframe
+                class="absolute top-0 left-0 w-full h-full"
                 src="https://www.youtube.com/embed/48lqF7QpJyc?si=1KC1wGqhMeR5bEF_"
                 title="Saxophoniste Club Red Katz Paris Soirée Événementielle"
                 frameborder="0"
@@ -174,25 +185,25 @@
             </iframe>
         </div>
     </div>
-</div>
+  </div>
 
-<!-- Row 3 (Le Sur-Mesure Artistique) -->
-<div class="vibe-row flex flex-col md:flex-row gap-8 items-center mb-16"> <!-- Pas de bordure en bas pour la dernière -->
+  <!-- 
+    TROISIÈME RANGÉE : VIDÉO VERTICALE (9:16)
+  -->
+  <div class="vibe-row flex flex-col md:flex-row gap-8 items-center mb-16">
     
-    <div class="vibe-text md:w-1/2 text-gray-700 space-y-4">
+    <div class="vibe-text md:w-1/2 space-y-4">
         <h3>Le Sur-Mesure Artistique</h3>
         <p>Chaque prestation d’Hélion Sax est une <span>création unique</span>, inspirée par ses voyages en Afrique, notamment à <span>Nairobi</span>, où il a exploré les rythmes envoûtants de l’<span>afro house</span>.</p>
         <p>Son jeu <span>doux, chaud et solaire</span> s’adapte à chaque lieu et à chaque public : un <span>écho naturel</span> dans un parking, une terrasse au coucher du soleil, une soirée intimiste ou festive.</p>
         <p>Hélion façonne des <span>moments sur mesure</span>, mêlant <span>émotion, élégance et spontanéité</span>.</p>
     </div>
     
-    <div class="vibe-video md:w-1/2 flex justify-center">
-        <!-- 
-        Le conteneur '.iframe-container-vertical' utilise votre CSS 
-        pour appliquer le max-width: 360px et le format 9:16.
-        -->
-        <div class="iframe-container-fixe">
+    <div class="vibe-video md:w-1/2 w-full flex justify-center">
+        <!-- Conteneur vertical -->
+        <div class="relative w-full aspect-[9/16] max-w-[360px] mx-auto rounded-lg overflow-hidden shadow-lg">
             <iframe
+                class="absolute top-0 left-0 w-full h-full"
                 src="https://www.youtube.com/embed/RsNLhYxGiuM?si=N3xtd4HHPy6s-MtJ"
                 title="Performance Saxophone luxe sur mesure événement"
                 frameborder="0"
@@ -202,8 +213,10 @@
             </iframe>
         </div>
     </div>
-</div>
+  </div>
 </section>
+
+
 
 
 
