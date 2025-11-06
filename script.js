@@ -1,5 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    // ======================================================================
+    // ===== NOUVEAU CODE : CHARGEMENT DIFFÉRÉ YOUTUBE (Action 1) =====
+    // ======================================================================
+
+    const lazyVideos = document.querySelectorAll('.youtube-lazy');
+
+    lazyVideos.forEach(container => {
+        const videoId = container.dataset.videoid;
+        
+        // 1. Création de l'élément Image (la miniature)
+        const img = document.createElement('img');
+        
+        // Utilisation de l'URL de miniature YouTube
+        img.src = `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
+        img.alt = "Cliquer pour lire la vidéo YouTube"; 
+        
+        container.appendChild(img);
+
+        // 2. Écoute du clic de l'utilisateur
+        container.addEventListener('click', () => {
+            // Création de l'iframe réel (déclenche le chargement des scripts YouTube)
+            const iframe = document.createElement('iframe');
+            
+            // L'attribut 'src' n'est défini qu'au clic, et inclut ?autoplay=1
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            iframe.setAttribute('frameborder', '0');
+            // Récupération des permissions originales
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+            iframe.setAttribute('allowfullscreen', '');
+            
+            // Application des classes Tailwind pour la position absolue
+            iframe.className = "absolute top-0 left-0 w-full h-full";
+
+            // Nettoyer le conteneur et insérer l'iframe
+            container.innerHTML = '';
+            container.appendChild(iframe);
+        });
+    });
+
+    // ======================================================================
+    // ===== Fin du Nouveau Code =====
+    // ======================================================================
+
+
+
     // ===== Slider Témoignages (CLIENTS) =====
     const slides = document.querySelectorAll('.client-slide');
     const prev = document.querySelector('.client-prev');
@@ -65,6 +110,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if(entry.isIntersecting){
                 entry.target.classList.add('visible');
 
+                // NOTE: Cette partie n'est pas nécessaire car vous n'utilisez plus 
+                // la balise <video> pour les vidéos YouTube. Je la laisse au cas 
+                // où vous auriez d'autres vidéos.
                 const video = entry.target.querySelector('video');
                 if(video){
                     video.style.transform = 'scale(1.02) translateY(-5px)';

@@ -556,3 +556,42 @@ footer .footer-social a:hover { transform:scale(1.3); }
 
 
 
+/* ================= CSS Spécifique à la Façade YouTube (Nouveau) ================= */
+
+/* Assure que le curseur est en mode pointeur sur la miniature */
+.youtube-lazy {
+    cursor: pointer;
+}
+
+/* Style de l'icône de lecture (le triangle rouge) */
+.youtube-lazy::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Le SVG du bouton de lecture est encodé ici pour éviter une requête HTTP */
+    width: 68px;
+    height: 48px;
+    background: url(data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 68 48'><path fill='%23f00' d='M66.5 7.7c-.8-3-3.2-5.4-6.2-6.2C54.8 0 34 0 34 0S13.2 0 7.7 1.5c-3 .8-5.4 3.2-6.2 6.2C0 13.2 0 24 0 24s0 10.8 1.5 16.3c.8 3 3.2 5.4 6.2 6.2C13.2 48 34 48 34 48s20.8 0 26.3-1.5c3-.8 5.4-3.2 6.2-6.2C68 34.8 68 24 68 24s0-10.8-1.5-16.3z'/><path fill='%23fff' d='M45 24L27 15v18z'/></svg>) no-repeat center;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease-out;
+    z-index: 10; /* Important pour être au-dessus de l'image */
+}
+
+/* Règle pour l'image de miniature insérée par le JS */
+.youtube-lazy > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute; /* L'image doit se superposer à 100% dans le conteneur */
+    top: 0;
+    left: 0;
+}
+
+/* Optionnel : effet visuel au survol */
+.youtube-lazy:hover::before {
+    transform: translate(-50%, -50%) scale(1.1);
+}
