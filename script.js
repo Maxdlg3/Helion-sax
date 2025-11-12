@@ -7,16 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const lazyVideos = document.querySelectorAll('.youtube-lazy');
 
     lazyVideos.forEach(container => {
-        const videoId = container.dataset.videoid;
-        
-        // 1. Création de l'élément Image (la miniature)
-        const img = document.createElement('img');
-        
-        // Utilisation de l'URL de miniature YouTube
-        img.src = `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
-        img.alt = "Cliquer pour lire la vidéo YouTube"; 
-        
-        container.appendChild(img);
+    const videoId = container.dataset.videoid;
+    
+    // 1. Création de l'élément Image (la miniature)
+    const img = document.createElement('img');
+    img.src = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`; // Utilisez hqdefault.jpg pour plus de fiabilité
+    img.alt = "Cliquer pour lire la vidéo YouTube"; 
+    
+    // 2. Création de l'élément Icône (le bouton Play)
+    const playIcon = document.createElement('i');
+    playIcon.className = "fas fa-play play-button-overlay"; // Ajout d'une classe spécifique
+    
+    container.appendChild(img);
+    container.appendChild(playIcon); //
 
         // 2. Écoute du clic de l'utilisateur
         container.addEventListener('click', () => {
@@ -24,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const iframe = document.createElement('iframe');
             
             // L'attribut 'src' n'est défini qu'au clic, et inclut ?autoplay=1
-            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`; 
             iframe.setAttribute('frameborder', '0');
             // Récupération des permissions originales
             iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');

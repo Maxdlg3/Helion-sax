@@ -561,24 +561,54 @@ footer .footer-social a:hover { transform:scale(1.3); }
 /* Assure que le curseur est en mode pointeur sur la miniature */
 .youtube-lazy {
     cursor: pointer;
+    position: relative;
 }
 
-/* Style de l'icône de lecture (le triangle rouge) */
-.youtube-lazy::before {
-    content: '';
-    display: block;
+/* ================= CSS Spécifique à la Façade YouTube (Nouveau) ================= */
+
+/* Les règles du conteneur restent valides */
+.youtube-lazy {
+    cursor: pointer;
+    position: relative;
+}
+
+/* Règle pour l'image de miniature insérée par le JS (reste valide) */
+.youtube-lazy > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+/* NOUVEAU STYLE POUR L'ICÔNE FONT AWESOME */
+/* NOUVEAU STYLE POUR L'ICÔNE FONT AWESOME : Or & Élégant */
+.play-button-overlay {
+    /* Centrage parfait au-dessus de l'image (Reste inchangé) */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     
-    /* Le SVG du bouton de lecture est encodé ici pour éviter une requête HTTP */
-    width: 68px;
-    height: 48px;
-    background: url(data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 68 48'><path fill='%23f00' d='M66.5 7.7c-.8-3-3.2-5.4-6.2-6.2C54.8 0 34 0 34 0S13.2 0 7.7 1.5c-3 .8-5.4 3.2-6.2 6.2C0 13.2 0 24 0 24s0 10.8 1.5 16.3c.8 3 3.2 5.4 6.2 6.2C13.2 48 34 48 34 48s20.8 0 26.3-1.5c3-.8 5.4-3.2 6.2-6.2C68 34.8 68 24 68 24s0-10.8-1.5-16.3z'/><path fill='%23fff' d='M45 24L27 15v18z'/></svg>) no-repeat center;
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
-    transition: transform 0.3s ease-out;
-    z-index: 10; /* Important pour être au-dessus de l'image */
+    /* Style du bouton : Plus subtil et en Or */
+    font-size: 3.5rem; /* Légèrement plus petit pour l'élégance */
+    color: #d9a441; /* Couleur Or (comme votre Top Bar) */
+    background: rgba(10, 10, 10, 0.7); /* Fond noir semi-transparent (rappel du Hero) */
+    border: 3px solid #d9a441; /* Bordure fine couleur Or */
+    border-radius: 50%; 
+    padding: 1.25rem 1.5rem 1.25rem 1.8rem; /* Ajustement du rembourrage pour le triangle */
+    box-shadow: 0 0 10px rgba(217, 164, 65, 0.6); /* Ombre légère dorée pour faire ressortir */
+    transition: all 0.4s ease-in-out; /* Transition plus douce */
+    z-index: 10;
+}
+
+/* Effet au survol : Devient plus lumineux et se soulève */
+.youtube-lazy:hover .play-button-overlay {
+    transform: translate(-50%, -50%) scale(1.1);
+    background: #d9a441; /* L'icône prend la couleur or au survol */
+    color: #0a0a0a; /* Le triangle devient noir pour le contraste */
+    box-shadow: 0 0 20px rgba(217, 164, 65, 0.9);
 }
 
 /* Règle pour l'image de miniature insérée par le JS */
@@ -591,7 +621,3 @@ footer .footer-social a:hover { transform:scale(1.3); }
     left: 0;
 }
 
-/* Optionnel : effet visuel au survol */
-.youtube-lazy:hover::before {
-    transform: translate(-50%, -50%) scale(1.1);
-}
