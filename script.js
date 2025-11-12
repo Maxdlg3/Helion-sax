@@ -7,19 +7,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const lazyVideos = document.querySelectorAll('.youtube-lazy');
 
     lazyVideos.forEach(container => {
-    const videoId = container.dataset.videoid;
-    
-    // 1. Création de l'élément Image (la miniature)
-    const img = document.createElement('img');
-    img.src = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`; // Utilisez hqdefault.jpg pour plus de fiabilité
-    img.alt = "Cliquer pour lire la vidéo YouTube"; 
-    
-    // 2. Création de l'élément Icône (le bouton Play)
-    const playIcon = document.createElement('i');
-    playIcon.className = "fas fa-play play-button-overlay"; // Ajout d'une classe spécifique
-    
-    container.appendChild(img);
-    container.appendChild(playIcon); //
+        const videoId = container.dataset.videoid;
+        
+        // 1. Création de l'élément Image (la miniature)
+        const img = document.createElement('img');
+        
+        // LIGNE À MODIFIER 1 : On utilise 'maxresdefault.jpg' pour la meilleure qualité (1280x720)
+        img.src = `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`; 
+        img.alt = "Cliquer pour lire la vidéo YouTube"; 
+        
+        // LIGNE À AJOUTER : Le système de secours (fallback)
+        img.onerror = () => {
+            // Si 'maxresdefault.jpg' n'existe pas, on utilise 'sddefault.jpg' (640x480)
+            img.src = `https://i.ytimg.com/vi/${videoId}/sddefault.jpg`; 
+        }
+        
+        // 2. Création de l'élément Icône (le bouton Play)
+        const playIcon = document.createElement('i');
+        playIcon.className = "fas fa-play play-button-overlay"; // Ajout d'une classe spécifique
+        
+        container.appendChild(img);
+        container.appendChild(playIcon); //
 
         // 2. Écoute du clic de l'utilisateur
         container.addEventListener('click', () => {
