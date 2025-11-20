@@ -1,3 +1,10 @@
+/* ================= FORCE LA SUPPRESSION DE LA BARRE BLANCHE ================= */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden !important; /* C'est LA commande qui coupe la barre blanche */
+    margin: 0;
+    padding: 0;
+}
 /* ================= Base Correction ================= */
 * {
     /* Ceci est CRUCIAL pour le design responsive */
@@ -140,22 +147,19 @@ body {
 }
 
 /* ===== Hero ===== */
-/* ===== Hero Section Hélion Sax (Corrigé) ===== */
+/* ================= HERO SECTION (CODE COMPLET ET PROPRE) ================= */
+
+/* 1. BASE PC (IDENTIQUE À VOTRE ORIGINAL - NE PAS TOUCHER) */
 .hero-luxe {
   position: relative;
   display: flex;
-  align-items: center; /* Centre verticalement sur PC */
+  align-items: center;
   justify-content: flex-start;
+  min-height: 100vh;
   
-  /* 1. On garde 100vh pour que ça prenne tout l'écran */
-  min-height: 100vh; 
-  
-  /* 2. Gestion des espacements (C'est là que ça se joue) */
-  /* Espace en haut pour que le logo ne cache pas le titre sur PC */
+  /* Espacement pour la barre transparente */
   padding-top: 140px; 
-  /* Espace en bas pour que le bouton "Réserver" respire et ne touche pas le bord */
-  padding-bottom: 100px; 
-  
+  padding-bottom: 100px;
   padding-left: 5%;
   padding-right: 5%;
   
@@ -165,38 +169,6 @@ body {
   overflow: hidden;
 }
 
-/* ... (Garde tes classes .hero-content, .luxury-frame, etc. telles quelles) ... */
-
-/* ===== VERSION MOBILE (Le correctif important) ===== */
-@media (max-width: 992px) {
-  .hero-luxe {
-    flex-direction: column;
-    text-align: center;
-    
-    /* 3. FORCE LE TEXTE À DESCENDRE SUR MOBILE */
-    /* Comme la Top Bar est grande sur mobile (icônes + logo + contact), 
-       il faut pousser le contenu vers le bas */
-    padding-top: 300px; 
-    
-    /* On enlève le centrage vertical strict pour éviter les bugs */
-    justify-content: flex-start; 
-    
-    /* On laisse la hauteur s'adapter au contenu si besoin */
-    height: auto;
-    min-height: 100vh;
-  }
-
-  .hero-content {
-    max-width: 100%;
-    margin-bottom: 50px; /* Espace supplémentaire sous le bouton en mobile */
-  }
-  
-  /* Ajustement pour l'image de fond sur mobile */
-  .hero-image img {
-    opacity: 0.4; /* Un peu plus sombre pour lire le texte */
-  }
-}
-
 .hero-content {
   z-index: 2;
   max-width: 50%;
@@ -204,7 +176,7 @@ body {
 }
 
 .hero-image {
-  position: absolute; /* image derrière le texte */
+  position: absolute;
   top: 0;
   right: 0;
   width: 100%;
@@ -213,24 +185,27 @@ body {
   overflow: hidden;
 }
 
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.5; /* fondu */
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
+/* Image de fond Mobile */
+  .hero-image img {
+    opacity: 0.6; 
+    
+    /* C'EST LA LIGNE MAGIQUE : */
+    /* 50% = Centre | 100% = Tout à droite | 0% = Tout à gauche */
+    /* On met 75% pour décaler la vue vers la droite et te voir jouer */
+    object-position: 75% center; 
+  }
 
 .hero-image img:hover {
   transform: scale(1.05);
   opacity: 0.6;
 }
 
-/* Cadre luxe autour du titre */
+/* LE CADRE LUXE (Style PC Original) */
 .luxury-frame {
   position: relative;
   display: inline-block;
-  padding: 1.5rem 3rem;
+  /* Vos marges PC originales (Grandes) */
+  padding: 1.5rem 3rem; 
   border-radius: 20px;
   overflow: hidden;
   margin-bottom: 2rem;
@@ -244,9 +219,7 @@ body {
   margin: 0;
 }
 
-.hero-content h1 .gold {
-  color: #d4af37; /* couleur or pour "Sax" */
-}
+.hero-content h1 .gold { color: #d4af37; }
 
 .hero-subtitle {
   font-size: 1.5rem;
@@ -277,39 +250,79 @@ body {
   box-shadow: 0 10px 30px rgba(212,175,55,0.5);
 }
 
-/* Animation cadre luxe */
-/* ===== VERSION MOBILE HERO (Ajustement Texte) ===== */
+
+/* ================= 2. VERSION MOBILE (CORRECTIF CADRE COUPÉ) ================= */
+/* ================= VERSION MOBILE HERO (FIXÉE & PHOTO PLEIN ÉCRAN) ================= */
 @media (max-width: 992px) {
   .hero-luxe {
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     text-align: center;
-    justify-content: flex-start; /* On commence en haut */
     
-    /* C'EST ICI LE SECRET : */
-    /* La barre fait maintenant environ 80px. On met 110px pour laisser un peu d'air. */
-    /* Si le texte est encore caché, augmentez ce chiffre à 130px */
-    padding-top: 120px; 
+    /* Positionnement sous la barre */
+    padding-top: 140px; 
+    padding-left: 15px;
+    padding-right: 15px;
     
-    padding-left: 5%;
-    padding-right: 5%;
-    height: auto;
-    min-height: 100vh;
+    /* FIX DE LA PHOTO : On force la hauteur à prendre tout l'écran */
+    min-height: 100vh;   
+    width: 100%;
+    position: relative; /* Important pour que l'image absolue se cale dessus */
+    
+    /* Sécurité supplémentaire contre la barre blanche */
+    overflow: hidden; 
   }
 
-  .hero-content {
-    max-width: 100%;
-    margin-bottom: 40px;
-    /* On s'assure que le texte est au premier plan */
-    position: relative; 
-    z-index: 5; 
+  /* Le wrapper de l'image doit aussi faire 100% */
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Force la hauteur totale */
+    z-index: 1;
+  }
+
+  /* L'image elle-même */
+  .hero-image img { 
+    width: 100%;
+    height: 100%; /* Force l'image à descendre jusqu'en bas */
+    object-fit: cover; /* Remplit sans déformer */
+    
+    opacity: 0.75; 
+    /* Décale l'image à 60% vers la droite pour te voir */
+    object-position: 40% center; 
   }
   
-  /* Image de fond un peu plus sombre sur mobile pour la lisibilité */
-  .hero-image img {
-    opacity: 0.4; 
+  
+
+  /* Le contenu (Texte) */
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    position: relative; 
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  /* CADRE (Ne dépasse pas) */
+  .luxury-frame {
+    display: inline-block;
+    border: 3px solid #b8860b;
+    padding: 1.5rem 1rem; 
+    max-width: 90vw; /* 90% de la largeur max */
+    box-sizing: border-box; /* Empêche le débordement */
+  }
+
+  .hero-content h1 {
+    font-size: 2rem; 
+    line-height: 1.3;
   }
 }
-
 
 /* ===== Vibe Section Luxe Moderne avec Animations (CODE CORRIGÉ) ===== */
 /* ===== Vibe Section Luxe Moderne avec Animations (FOND LÉGER) ===== */
