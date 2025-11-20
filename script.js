@@ -1,62 +1,64 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // ======================================================================
-    // ===== NOUVEAU CODE : CHARGEMENT DIFFÉRÉ YOUTUBE (Action 1) =====
+    // 1. GESTION DE LA TOP BAR (SCROLL EFFECT) - NOUVEAU
     // ======================================================================
+    const navbar = document.querySelector('.top-bar');
 
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
+
+    // ======================================================================
+    // 2. CHARGEMENT DIFFÉRÉ YOUTUBE
+    // ======================================================================
     const lazyVideos = document.querySelectorAll('.youtube-lazy');
 
     lazyVideos.forEach(container => {
         const videoId = container.dataset.videoid;
         
-        // 1. Création de l'élément Image (la miniature)
+        // Création de l'élément Image (la miniature)
         const img = document.createElement('img');
         
-        // LIGNE À MODIFIER 1 : On utilise 'maxresdefault.jpg' pour la meilleure qualité (1280x720)
+        // On utilise 'maxresdefault.jpg' pour la meilleure qualité
         img.src = `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`; 
         img.alt = "Cliquer pour lire la vidéo YouTube"; 
         
-        // LIGNE À AJOUTER : Le système de secours (fallback)
+        // Système de secours (fallback) si la HD n'existe pas
         img.onerror = () => {
-            // Si 'maxresdefault.jpg' n'existe pas, on utilise 'sddefault.jpg' (640x480)
             img.src = `https://i.ytimg.com/vi/${videoId}/sddefault.jpg`; 
         }
         
-        // 2. Création de l'élément Icône (le bouton Play)
+        // Création de l'élément Icône (le bouton Play)
         const playIcon = document.createElement('i');
-        playIcon.className = "fas fa-play play-button-overlay"; // Ajout d'une classe spécifique
+        playIcon.className = "fas fa-play play-button-overlay"; 
         
         container.appendChild(img);
-        container.appendChild(playIcon); //
+        container.appendChild(playIcon);
 
-        // 2. Écoute du clic de l'utilisateur
+        // Écoute du clic de l'utilisateur
         container.addEventListener('click', () => {
-            // Création de l'iframe réel (déclenche le chargement des scripts YouTube)
             const iframe = document.createElement('iframe');
-            
-            // L'attribut 'src' n'est défini qu'au clic, et inclut ?autoplay=1
             iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`; 
             iframe.setAttribute('frameborder', '0');
-            // Récupération des permissions originales
             iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
             iframe.setAttribute('allowfullscreen', '');
-            
-            // Application des classes Tailwind pour la position absolue
             iframe.className = "absolute top-0 left-0 w-full h-full";
 
-            // Nettoyer le conteneur et insérer l'iframe
             container.innerHTML = '';
             container.appendChild(iframe);
         });
     });
 
     // ======================================================================
-    // ===== Fin du Nouveau Code =====
+    // 3. SLIDER TÉMOIGNAGES (CLIENTS)
     // ======================================================================
-
-
-
-    // ===== Slider Témoignages (CLIENTS) =====
     const slides = document.querySelectorAll('.client-slide');
     const prev = document.querySelector('.client-prev');
     const next = document.querySelector('.client-next');
@@ -73,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const photo = slides[i].querySelector('img');
             if (photo) {
                 photo.classList.remove('photo-anim');
-                void photo.offsetWidth; // force le reflow pour rejouer l’animation
+                void photo.offsetWidth; // force le reflow
                 photo.classList.add('photo-anim');
             }
         };
@@ -91,48 +93,15 @@ document.addEventListener("DOMContentLoaded", () => {
         showSlide(index);
     }
 
-    // ===== Ancien Slider Témoignages (optionnel) =====
-    const cards = document.querySelectorAll('.temoignage-card');
-    const prevCard = document.querySelector('.prev');
-    const nextCard = document.querySelector('.next');
-    let cardIndex = 0;
-
-    if(cards.length && prevCard && nextCard){
-        const showCard = i => {
-            cards.forEach(c => c.classList.remove('active'));
-            cards[i].classList.add('active');
-        };
-        prevCard.addEventListener('click', () => {
-            cardIndex = (cardIndex - 1 + cards.length) % cards.length;
-            showCard(cardIndex);
-        });
-        nextCard.addEventListener('click', () => {
-            cardIndex = (cardIndex + 1) % cards.length;
-            showCard(cardIndex);
-        });
-        showCard(cardIndex);
-    }
-
-    // ===== Animation scroll =====
+    // ======================================================================
+    // 4. ANIMATION SCROLL (APPARITION DES ÉLÉMENTS)
+    // ======================================================================
     const scrollItems = document.querySelectorAll('.vibe-row, .vibe-item, .temoignage-item, .client-slide');
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if(entry.isIntersecting){
                 entry.target.classList.add('visible');
-
-                // NOTE: Cette partie n'est pas nécessaire car vous n'utilisez plus 
-                // la balise <video> pour les vidéos YouTube. Je la laisse au cas 
-                // où vous auriez d'autres vidéos.
-                const video = entry.target.querySelector('video');
-                if(video){
-                    video.style.transform = 'scale(1.02) translateY(-5px)';
-                    video.style.transition = 'transform 1s ease-out';
-                    setTimeout(() => { 
-                        video.style.transform = 'scale(1) translateY(0)'; 
-                    }, 800);
-                }
-
                 observer.unobserve(entry.target);
             }
         });
@@ -140,7 +109,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     scrollItems.forEach(item => observer.observe(item));
 
-    // ===== Hover titres h3 =====
+    // ======================================================================
+    // 5. HOVER TITRES H3
+    // ======================================================================
     const titles = document.querySelectorAll('.vibe-text h3');
     titles.forEach(title => {
         title.addEventListener('mouseenter', () => {
@@ -152,4 +123,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+});
+
+
+// ======================================================================
+// 1. GESTION DU PRELOADER (Synchronisé avec l'animation)
+// ======================================================================
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    
+    if (preloader) {
+        // ON CHANGE ICI : 2500ms = 2.5 secondes
+        // Le script attendra forcément que le logo soit rempli avant de disparaître
+        setTimeout(() => {
+            preloader.classList.add('fade-out');
+            
+            // On supprime l'élément une fois la transition de sortie finie
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 1000); 
+        }, 2500); // <--- C'est ce chiffre qui contrôle la durée minimale
+    }
 });
