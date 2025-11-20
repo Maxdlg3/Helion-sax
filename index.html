@@ -81,6 +81,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
 <div id="preloader">
     <div class="logo-container">
         <img src="images/logo.png" class="logo-base" alt="Hélion Sax Fond">
@@ -271,6 +272,19 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script> 
+<script>
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smooth: true
+  });
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+</script>
 </body>
 </html>
 
