@@ -99,17 +99,19 @@ body {
 
 /* ================= OPTIMISATION MOBILE (Top Bar Compacte) ================= */
 /* ================= OPTIMISATION MOBILE (Top Bar Compacte & Transparente) ================= */
+/* ================= OPTIMISATION MOBILE (Top Bar Réductrice) ================= */
 @media (max-width: 900px) {
     .top-bar {
         flex-direction: column;
         justify-content: center;
-        height: auto; 
+        
+        /* 🔑 ÉTAT INITIAL : Hauteur de départ */
+        height: 100px; /* La barre est initialement plus grande */
+        
         padding: 8px 10px; 
         
-        /* On passe de 0.9 à 0.65 : Beaucoup moins noir, plus aérien */
+        /* Garder le fond semi-transparent et flou */
         background: rgba(0, 0, 0, 0.65); 
-        
-        /* Flou intense pour compenser la transparence */
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
     }
@@ -122,7 +124,8 @@ body {
     }
     
     .logo img { 
-        height: 45px; 
+        /* 🔑 ÉTAT INITIAL : Taille de départ du logo */
+        height: 55px; 
         margin-top: 0; 
     } 
     
@@ -137,15 +140,17 @@ body {
         margin: 0; 
     }
     
-    /* Même fond transparent si on scroll sur mobile */
+    /* 🔑 ÉTAT SCROLLÉ MOBILE : La barre et le logo se réduisent */
     .top-bar.scrolled { 
-        height: auto; 
+        height: 60px; /* La barre se réduit de 100px à 60px */
         padding: 8px 10px;
-        background: rgba(0, 0, 0, 0.65); 
+        background: rgba(0, 0, 0, 0.65); /* Assurez-vous que la couleur reste opaque */
     }
-    .top-bar.scrolled .logo img { height: 45px; }
+    
+    .top-bar.scrolled .logo img { 
+        height: 40px; /* Le logo se réduit de 55px à 40px */
+    }
 }
-
 /* ===== Hero ===== */
 /* ================= HERO SECTION (CODE COMPLET ET PROPRE) ================= */
 
@@ -632,59 +637,118 @@ body {
 
 
 /* ================= Contact / Devis ================= */
-.contact { 
-    display:flex; 
-    flex-wrap:wrap; 
-    background: linear-gradient(to right, #f5e0b7, #f1e1b5);
-    color:#38241a; 
-    padding:80px 20px; 
-    gap:30px;
-    border-radius:25px;
+/* ========================================================== */
+/* == NOUVELLE SECTION CONTACT : OPTION 2 (VERRE DÉPOLI) == */
+/* ========================================================== */
+
+.contact-glass { 
+    /* L'image de la section devient l'arrière-plan de la section */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Effet Parallax léger au scroll */
+    
+    padding: 100px 5%; 
+    min-height: 90vh; /* Grande hauteur pour l'impact visuel */
+    
+    display: flex; 
+    align-items: center; 
+    justify-content: center; /* Centre le formulaire au milieu de l'image */
+    position: relative;
+    
+    /* Ombre subtile pour le texte du Hero si elle est placée ici */
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4); /* Assombrit légèrement l'image */
 }
-.contact img { 
-    width:50%; 
-    max-width:450px; 
-    border-radius:25px; 
-    margin-right:20px; 
-    transition: transform 0.5s ease;
+
+/* --- Wrapper du Formulaire (Assure que le flou ne s'applique qu'au formulaire) --- */
+.form-wrapper {
+    max-width: 500px;
+    width: 100%;
+    
+    /* LE CŒUR DU GLASSMORPHISM */
+    backdrop-filter: blur(15px); /* Flou intense */
+    -webkit-backdrop-filter: blur(15px);
+    
+    background: rgba(255, 255, 255, 0.1); /* Fond très transparent */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure blanche très fine */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    
+    /* Contient le formulaire */
+    padding: 30px; 
 }
-.contact img:hover {
-    transform: scale(1.05) rotateZ(-1deg);
-}
+
+/* --- Le Formulaire (Adapté au fond clair) --- */
 .contact-form { 
-    flex:1; 
-    min-width:300px; 
-    background: rgba(255,255,255,0.3);
-    padding:30px; 
-    border-radius:25px;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    color: white; /* Tout le texte est blanc sur le fond sombre de l'image */
 }
+
+.contact-form h2 {
+    font-family: 'Cormorant Garamond', serif; 
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #f1e1b5; /* Or pâle */
+    font-weight: 300;
+}
+
+/* --- Les Champs de Saisie (Minimaliste Ligne Blanche) --- */
 .contact-form input, 
 .contact-form textarea { 
     width:100%; 
-    padding:15px; 
-    margin:10px 0; 
-    border:1px solid #b8860b; 
-    border-radius:10px; 
-    font-size:16px;
+    padding: 15px 0 10px 0; 
+    margin: 15px 0; 
+    
+    background: transparent; 
+    color: white; 
+    font-size: 1.1rem;
+    
+    border: none; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Ligne semi-transparente */
+    border-radius: 0; 
+    
+    transition: border-bottom 0.3s ease;
 }
-.contact-form button { 
-    background:#38241a; 
-    color:white; 
-    border:none; 
-    padding:15px 30px; 
-    font-weight:bold; 
-    cursor:pointer; 
-    border-radius:50px; 
-    font-size:16px;
-    transition:0.3s; 
-}
-.contact-form button:hover { 
-    transform:translateY(-5px) scale(1.05); 
-    box-shadow:0 8px 25px rgba(0,0,0,0.3); 
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none; 
+    border-bottom: 2px solid #b8860b; /* Ligne Or au focus */
 }
 
+/* Changer la couleur des placeholders */
+.contact-form ::placeholder {
+    color: rgba(255, 255, 255, 0.6); 
+}
+
+/* --- Le Bouton (Contraste Fort) --- */
+.contact-form button { 
+    background: #b8860b; /* Or intense */
+    color: #38241a; /* Texte foncé */
+    border: none; 
+    padding: 15px 40px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    border-radius: 50px; 
+    font-size: 16px;
+    margin-top: 20px;
+    transition: 0.3s; 
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.contact-form button:hover { 
+    transform:translateY(-3px) scale(1.03); 
+    box-shadow:0 8px 25px rgba(184, 134, 11, 0.5); 
+}
+
+/* --- Responsive Mobile --- */
+@media(max-width: 768px){
+    .contact-glass {
+        min-height: 100vh;
+        background-attachment: scroll; /* Désactive le Parallax sur mobile */
+    }
+    .form-wrapper {
+        margin: 5% 0; /* Assure que le formulaire n'est pas collé aux bords */
+        padding: 20px;
+    }
+}
 /* ================= Footer ================= */
 footer { 
     background:#38241a; 
