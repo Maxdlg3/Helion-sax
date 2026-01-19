@@ -1080,27 +1080,29 @@ footer .footer-social a:hover { transform:scale(1.3); }
 
 /* ================= Responsive TikTok ================= */
 @media (max-width: 992px) {
+    /* On force l'ordre : Texte en premier, Vidéo en deuxième */
     .tiktok-container {
-        flex-direction: column-reverse; /* Vidéo au dessus ou en dessous selon préférence */
-        gap: 40px;
+        flex-direction: column !important; /* "column" met le premier élément HTML en haut */
+        gap: 30px;
         text-align: center;
     }
 
+    /* On s'assure que le bloc texte prend toute la largeur */
     .tiktok-text-content {
+        order: 1; /* Force la position 1 */
         max-width: 100%;
     }
 
-    .section-title {
-        text-align: center !important; /* Force le centrage sur mobile */
+    /* On s'assure que le bloc vidéo prend la position 2 */
+    .tiktok-embed-wrapper {
+        order: 2; /* Force la position 2 */
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
-    .tiktok-embed-wrapper {
-        transform: rotate(0deg); /* Pas de rotation sur mobile pour gagner de la place */
-        width: 100%;
-    }
-    
-    /* Force le player TikTok à ne pas dépasser */
-    .tiktok-embed {
-        margin: 0 auto !important; 
+    /* Optionnel : Ajuster le titre pour le mobile */
+    .tiktok-text-content h2 {
+        text-align: center !important;
     }
 }
