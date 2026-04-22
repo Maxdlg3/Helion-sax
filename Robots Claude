@@ -1,0 +1,47 @@
+# ==========================================================================
+# robots.txt pour helionsax.com
+# Place ce fichier à la racine de ton site (même niveau que index.html)
+# ==========================================================================
+
+# Tous les robots : accès total autorisé au contenu public
+User-agent: *
+Allow: /
+
+# Bloquer l'indexation de dossiers/fichiers techniques sensibles
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /*.json$
+
+# Autorisation explicite pour les ressources (images, CSS, JS) :
+# Google a besoin d'accéder aux CSS/JS pour bien rendre ta page
+Allow: /images/
+Allow: /*.css$
+Allow: /*.js$
+
+# Bots d'IA - autorisation explicite pour maximiser ta visibilité
+# quand les gens demandent "un saxophoniste à Paris" à ChatGPT/Gemini/Claude
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemap (le plus important : dit à Google où trouver ta carte de site)
+Sitemap: https://helionsax.com/sitemap.xml
