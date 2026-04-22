@@ -262,6 +262,57 @@
 }
 </script>
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Hélion Sax",
+  "description": "Saxophoniste événementiel à Paris pour mariages, soirées privées et événements d'entreprise. Jazz, house, afro house, funk.",
+  "url": "https://helionsax.com/",
+  "telephone": "+33695281906",
+  "email": "contact@helionsax.com",
+  "image": "https://helionsax.com/images/logo-affiche.png",
+  "logo": "https://helionsax.com/images/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Paris",
+    "addressRegion": "Île-de-France",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.8566,
+    "longitude": 2.3522
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Paris"},
+    {"@type": "AdministrativeArea", "name": "Île-de-France"},
+    {"@type": "Country", "name": "France"}
+  ],
+  "priceRange": "€€€",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "09:00",
+    "closes": "23:00"
+  },
+  "sameAs": [
+    "https://www.instagram.com/helionsaxx",
+    "https://www.tiktok.com/@helionsaxx",
+    "https://www.youtube.com/@mdlg3721"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Prestations de saxophone événementiel",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Saxophoniste pour mariage Paris"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Saxophoniste pour événement d'entreprise Paris"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Saxophoniste pour soirée privée Paris"}}
+    ]
+  }
+}
+</script>
 </head>
 <body>
 
@@ -276,41 +327,46 @@
 </div>
 
 <!-- Top bar (inchangée) -->
-<div class="top-bar">
+<div class="top-bar topbar-pages">
     <div class="social-icons">
-        <a href="https://www.instagram.com/helionsaxx?igsh=czNvdTNiemR0eHdn&utm_source=qr" target="_blank" rel="noopener" aria-label="Profil Instagram d'Hélion Sax">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.youtube.com/@mdlg3721" target="_blank" rel="noopener" aria-label="Chaîne YouTube d'Hélion Sax">
-            <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://www.tiktok.com/@helionsaxx?_t=ZN-90yifNWu75a&_r=1" target="_blank" rel="noopener" aria-label="Profil TikTok d'Hélion Sax">
-            <i class="fab fa-tiktok"></i>
-        </a>
+        <a href="https://www.instagram.com/helionsaxx" target="_blank" rel="noopener" aria-label="Instagram Hélion Sax"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@mdlg3721" target="_blank" rel="noopener" aria-label="Chaîne YouTube d'Hélion Sax"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@helionsaxx" target="_blank" rel="noopener" aria-label="TikTok Hélion Sax"><i class="fab fa-tiktok"></i></a>
     </div>
-    <div class="logo">
-        <!-- CHANGEMENT #10 : alt plus descriptif pour SEO -->
-        <a href="/"><img src="images/logo.png" alt="Logo Hélion Sax saxophoniste événementiel Paris"></a>
-    </div>
-    <div class="contact-info">
-        <div class="contact-info-line">
+    <div class="logo-block">
+        <div class="logo">
+            <a href="/"><img src="images/logo.png" alt="Logo Hélion Sax saxophoniste événementiel Paris"></a>
+        </div>
+        <div class="contact-info">
             <i class="fas fa-phone"></i>
-            <a href="tel:+33695281906" style="color: inherit; text-decoration: none;">06 95 28 19 06</a>
+            <a href="tel:+33695281906">06 95 28 19 06</a>
             &nbsp;/&nbsp;
             <i class="fas fa-envelope"></i>
-            <a href="mailto:contact@helionsax.com" style="color: inherit; text-decoration: none;">contact@helionsax.com</a>
+            <a href="mailto:contact@helionsax.com">contact@helionsax.com</a>
         </div>
-        <nav class="main-nav">
-            <a href="/" class="active">Accueil</a>
-            <a href="/mariage/">Mariage</a>
-            <a href="/entreprise/">Entreprise</a>
-            <a href="/tarifs/">Tarifs</a>
-            <a href="/a-propos/">À propos</a>
-            <a href="#devis-contact">Contact</a>
-        </nav>
     </div>
+    <button class="burger-btn" aria-label="Ouvrir le menu" onclick="document.getElementById('menuDrawer').classList.add('open');document.getElementById('menuOverlay').classList.add('open');">
+        <i class="fas fa-bars"></i> Menu
+    </button>
 </div>
 
+<!-- MENU DRAWER -->
+<div class="menu-drawer-overlay" id="menuOverlay" onclick="document.getElementById('menuDrawer').classList.remove('open');this.classList.remove('open');"></div>
+<aside class="menu-drawer" id="menuDrawer" aria-label="Menu principal">
+    <button class="menu-drawer-close" aria-label="Fermer le menu" onclick="document.getElementById('menuDrawer').classList.remove('open');document.getElementById('menuOverlay').classList.remove('open');">&times;</button>
+    <nav>
+        <a href="/" class="active">Accueil</a>
+        <a href="/mariage/">Mariage</a>
+        <a href="/entreprise/">Entreprise</a>
+        <a href="/tarifs/">Tarifs</a>
+        <a href="/a-propos/">À propos</a>
+        <a href="#devis-contact" onclick="document.getElementById('menuDrawer').classList.remove('open');document.getElementById('menuOverlay').classList.remove('open');">Contact</a>
+    </nav>
+    <div class="menu-drawer-footer">
+        <a href="tel:+33695281906"><i class="fas fa-phone"></i> 06 95 28 19 06</a>
+        <a href="mailto:contact@helionsax.com"><i class="fas fa-envelope"></i> contact@helionsax.com</a>
+    </div>
+</aside>
 <!-- ============================================================= -->
 <!-- HERO SECTION                                                   -->
 <!-- ============================================================= -->
@@ -529,7 +585,7 @@
         <form action="https://formspree.io/f/xeopkaqg" method="POST" class="contact-form">
             <h2>Parlez-moi de votre événement</h2>
             <input type="text" name="Nom" placeholder="Votre nom" required autocomplete="name">
-            <input type="email" name="Email" placeholder="Votre email" required autocomplete="email">
+            <input type="tel" name="Téléphone" placeholder="Votre numéro de téléphone" required autocomplete="tel" pattern="[0-9+\s().-]{8,}">
             <textarea name="Message" placeholder="Date, lieu, type d'événement, vos attentes..." required></textarea>
             <button type="submit">Réserver &amp; Demander un devis</button>
         </form>
