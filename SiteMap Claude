@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Page d'accueil : priorité maximale -->
+  <url>
+    <loc>https://helionsax.com/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://helionsax.com/images/helion-sax-club-paris.jpeg</image:loc>
+      <image:title>Hélion Sax saxophoniste à Paris en live en club</image:title>
+      <image:caption>Hélion Sax saxophoniste événementiel à Paris - prestation live en club</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://helionsax.com/images/mariage.jfif</image:loc>
+      <image:title>Hélion Sax saxophoniste pour mariage à Paris</image:title>
+      <image:caption>Saxophoniste mariage à Paris - témoignage clients Marion et Charles</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://helionsax.com/images/logo.png</image:loc>
+      <image:title>Logo Hélion Sax saxophoniste événementiel Paris</image:title>
+    </image:image>
+  </url>
+
+  <!-- Page Mariage : priorité très élevée (enjeu business principal) -->
+  <url>
+    <loc>https://helionsax.com/mariage/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://helionsax.com/images/mariage.jfif</image:loc>
+      <image:title>Saxophoniste mariage Paris Hélion Sax</image:title>
+      <image:caption>Saxophoniste pour mariage à Paris et en Île-de-France</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Page Entreprise : priorité très élevée -->
+  <url>
+    <loc>https://helionsax.com/entreprise/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://helionsax.com/images/elion-sax-soiree-privee.jpeg</image:loc>
+      <image:title>Saxophoniste événementiel entreprise Paris Hélion Sax</image:title>
+      <image:caption>Saxophoniste pour événements d'entreprise et soirées privées à Paris</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Page Tarifs : priorité haute (page conversion) -->
+  <url>
+    <loc>https://helionsax.com/tarifs/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Page À propos : priorité moyenne (importante pour les IA) -->
+  <url>
+    <loc>https://helionsax.com/a-propos/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://helionsax.com/images/helion-sax-club-paris.jpeg</image:loc>
+      <image:title>Hélion Sax saxophoniste français à Paris</image:title>
+      <image:caption>Portrait Hélion Sax saxophoniste événementiel</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
