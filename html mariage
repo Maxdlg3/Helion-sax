@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Saxophoniste Mariage Paris | Cérémonie, Vin d'Honneur, Soirée | Hélion Sax</title>
+<meta name="description" content="Saxophoniste pour votre mariage à Paris et en Île-de-France. Prestations cérémonie, vin d'honneur, soirée dansante. Format solo ou DJ + sax live. Devis gratuit sous 24h.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="keywords" content="saxophoniste mariage paris, saxophoniste mariage, saxophoniste mariage île-de-france, saxophoniste cérémonie mariage, saxophoniste vin d'honneur, sax dj mariage">
+<meta name="geo.region" content="FR-75">
+<meta name="geo.placename" content="Paris">
+<meta name="theme-color" content="#0a0a0a">
+
+<link rel="canonical" href="https://helionsax.com/mariage/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Hélion Sax">
+<meta property="og:title" content="Saxophoniste Mariage Paris | Cérémonie, Vin d'Honneur, Soirée | Hélion Sax">
+<meta property="og:description" content="Saxophoniste pour votre mariage à Paris et en Île-de-France. Devis gratuit sous 24h.">
+<meta property="og:url" content="https://helionsax.com/mariage/">
+<meta property="og:image" content="https://helionsax.com/images/mariage.jfif">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Saxophoniste Mariage Paris | Hélion Sax">
+<meta name="twitter:description" content="Saxophoniste pour votre mariage à Paris. Cérémonie, vin d'honneur, soirée. Devis gratuit sous 24h.">
+<meta name="twitter:image" content="https://helionsax.com/images/mariage.jfif">
+
+<!-- Preconnect -->
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/images/logo-affiche.png">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+<!-- CSS principal (chemin absolu depuis la racine) -->
+<link rel="stylesheet" href="/style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- ========== SCHEMA.ORG : SERVICE MARIAGE + FAQ + BREADCRUMB ========== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://helionsax.com/mariage/#service",
+      "serviceType": "Saxophoniste pour mariage",
+      "name": "Saxophoniste Mariage à Paris — Hélion Sax",
+      "description": "Prestation saxophone live pour mariage à Paris et en Île-de-France : cérémonie, vin d'honneur, soirée dansante. Format solo ou DJ + saxophone.",
+      "provider": {
+        "@type": "MusicGroup",
+        "name": "Hélion Sax",
+        "url": "https://helionsax.com/",
+        "telephone": "+33695281906",
+        "email": "contact@helionsax.com"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Paris"},
+        {"@type": "AdministrativeArea", "name": "Île-de-France"},
+        {"@type": "AdministrativeArea", "name": "Seine-et-Marne"}
+      ],
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "EUR",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "EUR",
+          "description": "Devis gratuit et personnalisé sous 24h"
+        }
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "author": {"@type": "Person", "name": "Marion et Charles"},
+        "datePublished": "2025-06-15",
+        "reviewBody": "Hélion Sax a vraiment marqué notre mariage. Il a su créer une ambiance magique, douce au début puis festive quand la soirée a commencé."
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Pouvez-vous apprendre des morceaux spécialement pour notre mariage ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui, sans problème. Si vous avez une chanson qui compte pour vous — pour l'entrée des mariés, la première danse ou n'importe quel moment — Hélion l'apprend et l'interprète à sa façon. Il s'adapte à tout répertoire."}
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps dure une prestation mariage ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "C'est entièrement flexible. Hélion peut intervenir une demi-heure pour un moment précis comme jouer plusieurs heures sur l'ensemble de la journée — cérémonie, vin d'honneur et soirée. Tout se définit selon votre programme lors de la demande de devis."}
+        },
+        {
+          "@type": "Question",
+          "name": "Jouez-vous seul ou avec d'autres musiciens ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Les deux. Hélion se produit très souvent en solo. Mais il travaille aussi avec des musiciens partenaires de confiance : pianiste, guitariste, chanteur. Si votre mariage appelle une formation live plus complète, c'est possible."}
+        },
+        {
+          "@type": "Question",
+          "name": "Vous déplacez-vous hors de Paris pour les mariages ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui, et sans contrainte. Hélion est véhiculé et se déplace partout : Paris, toute l'Île-de-France, la France entière, et l'international. Il a notamment joué au Domaine du Chesney en dehors de Paris."}
+        },
+        {
+          "@type": "Question",
+          "name": "Avez-vous des DJs partenaires pour le format DJ + saxophone ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui. Hélion dispose d'un réseau de DJs partenaires avec qui il joue régulièrement. Si vous n'avez pas encore de DJ, il peut vous en recommander un avec qui la complicité est déjà là. Si vous avez déjà votre DJ, un appel en amont suffit pour caler le set."}
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps à l'avance faut-il réserver ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Pour un mariage, idéalement 6 à 12 mois à l'avance, surtout pour les samedis de mai à septembre. Des dates restent disponibles à 2-3 mois selon le calendrier — Hélion répond sous 24h à toute demande."}
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://helionsax.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Saxophoniste Mariage", "item": "https://helionsax.com/mariage/"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============ TOP BAR AVEC NAVIGATION ============ -->
+<div class="top-bar">
+    <div class="social-icons">
+        <a href="https://www.instagram.com/helionsaxx" target="_blank" rel="noopener" aria-label="Instagram Hélion Sax"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@mdlg3721" target="_blank" rel="noopener" aria-label="YouTube Hélion Sax"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@helionsaxx" target="_blank" rel="noopener" aria-label="TikTok Hélion Sax"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <div class="logo">
+        <a href="/"><img src="/images/logo.png" alt="Logo Hélion Sax saxophoniste Paris"></a>
+    </div>
+    <nav class="main-nav">
+        <a href="/">Accueil</a>
+        <a href="/mariage/" class="active">Mariage</a>
+        <a href="/entreprise/">Entreprise</a>
+        <a href="/tarifs/">Tarifs</a>
+        <a href="/a-propos/">À propos</a>
+        <a href="/#devis-contact">Contact</a>
+    </nav>
+</div>
+
+<!-- ============ HERO DE PAGE ============ -->
+<section style="background: #0a0a0a; color: #fff; padding: 180px 5% 80px; text-align: center; position: relative;">
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'Ariane" style="margin-bottom: 30px; font-size: 0.85rem; opacity: 0.7;">
+        <a href="/" style="color: #d4af37; text-decoration: none;">Accueil</a>
+        <span style="margin: 0 10px;">›</span>
+        <span>Saxophoniste Mariage</span>
+    </nav>
+    
+    <div class="luxury-frame" style="display: inline-block; border: 3px solid #b8860b; padding: 1.5rem 3rem; border-radius: 20px; margin-bottom: 30px;">
+        <h1 style="font-size: 2.5rem; font-family: 'Playfair Display', serif; margin: 0; letter-spacing: 2px; line-height: 1.2;">
+            Saxophoniste pour votre <span class="gold" style="color: #d4af37;">Mariage</span><br>
+            à Paris et en Île-de-France
+        </h1>
+    </div>
+    
+    <p style="font-size: 1.3rem; margin-top: 20px; opacity: 0.9; max-width: 700px; margin-left: auto; margin-right: auto;">
+        Une ambiance musicale live qui transforme chaque instant de votre journée en souvenir.
+    </p>
+    
+    <a href="/#devis-contact" class="btn-reserve" style="margin-top: 30px; display: inline-block;">Demander un devis mariage</a>
+</section>
+
+<!-- ============ INTRO ============ -->
+<section class="vibe-heliion-luxe" style="padding: 80px 0;">
+    <div class="vibe-content-wrapper" style="max-width: 900px; text-align: center;">
+        <h2 class="section-title" style="font-size: 2.2rem;">Le saxophone, la signature sonore qui change tout</h2>
+        <p style="font-size: 1.2rem; line-height: 1.8; color: #3a2b1f;">
+            Un mariage réussi se joue dans les détails. Le son d'un saxophone <strong>live</strong> transforme une cérémonie en moment suspendu, un vin d'honneur en expérience raffinée, et une soirée en énergie qui ne retombe jamais. Hélion Sax se produit lors de mariages à Paris et en Île-de-France depuis plusieurs années, avec une approche sur mesure pour chaque couple.
+        </p>
+    </div>
+</section>
+
+<!-- ============ 3 MOMENTS CLÉS DU MARIAGE ============ -->
+<section class="vibe-heliion-luxe" style="padding: 40px 0 100px; background: #f7f0e8;">
+    <div class="vibe-content-wrapper">
+        <h2 class="section-title">Trois moments, une ambiance sur mesure</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px;">
+            
+            <!-- Cérémonie -->
+            <div style="background: #fff; padding: 40px 30px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border-top: 4px solid #b8860b;">
+                <div style="font-size: 2.5rem; color: #b8860b; margin-bottom: 15px;">💍</div>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #38241a; margin-bottom: 15px;">La cérémonie</h3>
+                <p style="line-height: 1.7; color: #3a2b1f;">
+                    Entrée des mariés, échange des vœux, signature des registres, sortie festive. Hélion Sax accompagne les temps forts de la cérémonie (laïque, civile ou religieuse) avec un répertoire <strong>jazz, classique ou moderne</strong> selon votre univers. Possibilité d'adapter une chanson qui compte pour vous.
+                </p>
+            </div>
+            
+            <!-- Vin d'honneur -->
+            <div style="background: #fff; padding: 40px 30px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border-top: 4px solid #b8860b;">
+                <div style="font-size: 2.5rem; color: #b8860b; margin-bottom: 15px;">🥂</div>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #38241a; margin-bottom: 15px;">Le vin d'honneur</h3>
+                <p style="line-height: 1.7; color: #3a2b1f;">
+                    Ambiance <strong>jazz lounge ou bossa nova</strong>, Hélion se déplace parmi vos invités pour créer une proximité musicale. Idéal pour les cocktails en terrasse, en jardin ou dans un espace intérieur élégant. Durée type : 1h à 2h.
+                </p>
+            </div>
+            
+            <!-- Soirée -->
+            <div style="background: #fff; padding: 40px 30px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border-top: 4px solid #b8860b;">
+                <div style="font-size: 2.5rem; color: #b8860b; margin-bottom: 15px;">🎷</div>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #38241a; margin-bottom: 15px;">La soirée dansante</h3>
+                <p style="line-height: 1.7; color: #3a2b1f;">
+                    C'est là que le saxophone passe en mode <strong>énergie</strong> : house, afro house, funk, R&amp;B. En duo avec votre DJ (format très demandé), Hélion intervient en live sur les temps forts pour faire exploser le dancefloor. Plusieurs sets dans la soirée, entre 3 et 6 prises.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FORMULE DJ + SAX ============ -->
+<section class="vibe-heliion-luxe" style="padding: 80px 0;">
+    <div class="vibe-content-wrapper">
+        <div class="vibe-row flex flex-col md:flex-row gap-8 items-center">
+            <div class="vibe-text md:w-1/2 space-y-4">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; color: #38241a;">La formule DJ + Saxophone live</h3>
+                <p>Le <span>saxophone live sur un set DJ</span> est devenu <span>LE format signature</span> des mariages modernes. Le DJ tient l'ambiance, Hélion apporte les <span>moments d'émotion</span> : une ligne mélodique sur un morceau qui monte, un solo improvisé sur un drop, une intervention remarquée sur la première danse.</p>
+                <p>Hélion Sax collabore régulièrement avec des <span>DJs partenaires</span> à Paris et peut vous recommander un DJ avec qui il joue en harmonie parfaite. Si vous avez déjà votre DJ, aucun problème : une prise de contact en amont permet de caler le set.</p>
+            </div>
+            <div class="vibe-video md:w-1/2 w-full flex justify-center">
+                <div class="relative w-full aspect-[9/16] max-w-[360px] mx-auto rounded-lg overflow-hidden shadow-lg youtube-lazy" data-videoid="omsskrxWOqE"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ TÉMOIGNAGE MARIAGE ============ -->
+<section class="clients" style="padding: 80px 0;">
+    <h2 class="clients-title">Ce que disent les mariés</h2>
+    <div class="client-slider">
+        <div class="client-slide active" style="display: flex;">
+            <div class="client-photo">
+                <img src="/images/mariage.jfif" alt="Avis mariage Marion et Charles — saxophoniste Hélion Sax Paris" loading="lazy" decoding="async">
+            </div>
+            <div class="client-content">
+                <p class="client-quote">« Hélion Sax a vraiment marqué notre mariage. Il a su créer une ambiance magique, douce au début puis festive quand la soirée a commencé. Tous nos invités nous en ont parlé ensuite. En plus d'être très pro, il dégage une vraie énergie positive, on sent qu'il aime ce qu'il fait. »</p>
+                <h3 class="client-name">Marion et Charles, mariés en juin 2025</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FAQ MARIAGE ============ -->
+<section class="vibe-heliion-luxe" style="padding: 60px 0 80px;">
+    <div class="vibe-content-wrapper" style="max-width: 900px;">
+        <h2 class="section-title">Questions fréquentes sur le saxophone de mariage</h2>
+        
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; color: #38241a;">Pouvez-vous apprendre des morceaux spécialement pour notre mariage ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">Oui, sans problème. C'est même quelque chose qu'Hélion fait régulièrement. Si vous avez <strong>une chanson qui compte pour vous</strong> — pour l'entrée des mariés, la première danse ou n'importe quel moment — il l'apprend et l'interprète à sa façon, avec sa couleur. Partagez-lui vos envies musicales lors du premier contact, il s'adapte à tout.</p>
+        </details>
+
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; color: #38241a;">Combien de temps dure une prestation mariage ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">C'est entièrement flexible. Hélion peut intervenir <strong>une demi-heure</strong> pour habiller un moment précis (entrée des mariés, ouverture de bal), comme jouer <strong>plusieurs heures</strong> sur l'ensemble de la journée — cérémonie, vin d'honneur et soirée. Tout se définit selon votre programme et votre budget lors de la demande de devis.</p>
+        </details>
+
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; color: #38241a;">Jouez-vous seul ou avec d'autres musiciens ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">Les deux. Hélion se produit très souvent <strong>en solo</strong>, ce qui est largement suffisant pour créer une ambiance complète. Mais il travaille aussi avec des <strong>musiciens partenaires de confiance</strong> : pianiste, guitariste, chanteur. Si votre mariage appelle une <strong>formation live plus complète</strong>, c'est possible — il monte le groupe selon vos besoins et votre budget.</p>
+        </details>
+
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; color: #38241a;">Vous déplacez-vous hors de Paris ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">Oui, et sans contrainte. Hélion est <strong>véhiculé</strong> et se déplace partout : Paris, toute l'Île-de-France, la France entière, et l'international pour les événements qui le justifient. Il a notamment joué au <strong>Domaine du Chesney</strong> en dehors de Paris. Les frais de déplacement éventuels sont précisés dans le devis, en toute transparence.</p>
+        </details>
+
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; color: #38241a;">Vous avez des DJs partenaires à recommander ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">Oui. Hélion a construit au fil des années un <strong>réseau de DJs partenaires</strong> avec qui il joue régulièrement. Si vous n'avez pas encore de DJ, il peut vous en recommander un avec qui la complicité est déjà là — ce qui change tout sur la qualité du rendu en soirée. Si vous avez déjà votre DJ, pas de problème : un appel en amont suffit pour caler le set ensemble.</p>
+        </details>
+
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; color: #38241a;">À quels moments du mariage intervient le saxophone ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">Le sax s'intègre naturellement aux trois temps du mariage : <strong>la cérémonie</strong> (entrée, vœux, sortie) pour l'émotion, <strong>le vin d'honneur</strong> (ambiance jazz et lounge, déambulation parmi les invités) pour la chaleur, et <strong>la soirée dansante</strong> (house, afro house, énergie live sur le dancefloor) pour la fête. Hélion peut couvrir un seul de ces moments ou les trois — c'est vous qui choisissez.</p>
+        </details>
+
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; color: #38241a;">Combien de temps à l'avance faut-il réserver ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">Pour un mariage, idéalement <strong>6 à 12 mois à l'avance</strong>, surtout pour les samedis de mai à septembre qui partent très vite. Des dates restent disponibles à 2-3 mois selon le calendrier — n'hésitez pas à demander même tardivement, Hélion vous répond sous 24h.</p>
+        </details>
+    </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); color: #fff; padding: 80px 5%; text-align: center;">
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 20px;">Prêt(e) à parler de votre mariage&nbsp;?</h2>
+    <p style="font-size: 1.2rem; opacity: 0.85; margin-bottom: 35px; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Dites-moi la date, le lieu, vos envies musicales. Je vous fais un devis sur mesure sous 24&nbsp;h.
+    </p>
+    <a href="/#devis-contact" class="btn-reserve" style="display: inline-block;">Demander un devis gratuit</a>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+    <p>Hélion Sax – Saxophoniste Événementiel à Paris | Shows Live &amp; Soirées Uniques</p>
+    <div class="footer-social">
+        <a href="https://www.instagram.com/helionsaxx" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@mdlg3721" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@helionsaxx" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <p>Contact : <a href="tel:+33695281906" style="color: inherit;">06 95 28 19 06</a> | Email : <a href="mailto:contact@helionsax.com" style="color: inherit;">contact@helionsax.com</a></p>
+    <p>© 2026 Hélion Sax — Tous droits réservés</p>
+</footer>
+
+<script src="/script.js" defer></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Saxophoniste Mariage Paris | Cérémonie, Vin d'Honneur, Soirée | Hélion Sax</title>
+<meta name="description" content="Saxophoniste pour votre mariage à Paris et en Île-de-France. Prestations cérémonie, vin d'honneur, soirée dansante. Format solo ou DJ + sax live. Devis gratuit sous 24h.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="keywords" content="saxophoniste mariage paris, saxophoniste mariage, saxophoniste mariage île-de-france, saxophoniste cérémonie mariage, saxophoniste vin d'honneur, sax dj mariage">
+<meta name="geo.region" content="FR-75">
+<meta name="geo.placename" content="Paris">
+<meta name="theme-color" content="#0a0a0a">
+
+<link rel="canonical" href="https://helionsax.com/mariage/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Hélion Sax">
+<meta property="og:title" content="Saxophoniste Mariage Paris | Cérémonie, Vin d'Honneur, Soirée | Hélion Sax">
+<meta property="og:description" content="Saxophoniste pour votre mariage à Paris et en Île-de-France. Devis gratuit sous 24h.">
+<meta property="og:url" content="https://helionsax.com/mariage/">
+<meta property="og:image" content="https://helionsax.com/images/mariage.jfif">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Saxophoniste Mariage Paris | Hélion Sax">
+<meta name="twitter:description" content="Saxophoniste pour votre mariage à Paris. Cérémonie, vin d'honneur, soirée. Devis gratuit sous 24h.">
+<meta name="twitter:image" content="https://helionsax.com/images/mariage.jfif">
+
+<!-- Preconnect -->
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/images/logo-affiche.png">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+<!-- CSS principal (chemin absolu depuis la racine) -->
+<link rel="stylesheet" href="/style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- ========== SCHEMA.ORG : SERVICE MARIAGE + FAQ + BREADCRUMB ========== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://helionsax.com/mariage/#service",
+      "serviceType": "Saxophoniste pour mariage",
+      "name": "Saxophoniste Mariage à Paris — Hélion Sax",
+      "description": "Prestation saxophone live pour mariage à Paris et en Île-de-France : cérémonie, vin d'honneur, soirée dansante. Format solo ou DJ + saxophone.",
+      "provider": {
+        "@type": "MusicGroup",
+        "name": "Hélion Sax",
+        "url": "https://helionsax.com/",
+        "telephone": "+33695281906",
+        "email": "contact@helionsax.com"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Paris"},
+        {"@type": "AdministrativeArea", "name": "Île-de-France"},
+        {"@type": "AdministrativeArea", "name": "Seine-et-Marne"}
+      ],
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "EUR",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "EUR",
+          "description": "Devis gratuit et personnalisé sous 24h"
+        }
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "author": {"@type": "Person", "name": "Marion et Charles"},
+        "datePublished": "2025-06-15",
+        "reviewBody": "Hélion Sax a vraiment marqué notre mariage. Il a su créer une ambiance magique, douce au début puis festive quand la soirée a commencé."
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Pouvez-vous apprendre des morceaux spécialement pour notre mariage ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui, sans problème. Si vous avez une chanson qui compte pour vous — pour l'entrée des mariés, la première danse ou n'importe quel moment — Hélion l'apprend et l'interprète à sa façon. Il s'adapte à tout répertoire."}
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps dure une prestation mariage ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "C'est entièrement flexible. Hélion peut intervenir une demi-heure pour un moment précis comme jouer plusieurs heures sur l'ensemble de la journée — cérémonie, vin d'honneur et soirée. Tout se définit selon votre programme lors de la demande de devis."}
+        },
+        {
+          "@type": "Question",
+          "name": "Jouez-vous seul ou avec d'autres musiciens ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Les deux. Hélion se produit très souvent en solo. Mais il travaille aussi avec des musiciens partenaires de confiance : pianiste, guitariste, chanteur. Si votre mariage appelle une formation live plus complète, c'est possible."}
+        },
+        {
+          "@type": "Question",
+          "name": "Vous déplacez-vous hors de Paris pour les mariages ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui, et sans contrainte. Hélion est véhiculé et se déplace partout : Paris, toute l'Île-de-France, la France entière, et l'international. Il a notamment joué au Domaine du Chesney en dehors de Paris."}
+        },
+        {
+          "@type": "Question",
+          "name": "Avez-vous des DJs partenaires pour le format DJ + saxophone ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui. Hélion dispose d'un réseau de DJs partenaires avec qui il joue régulièrement. Si vous n'avez pas encore de DJ, il peut vous en recommander un avec qui la complicité est déjà là. Si vous avez déjà votre DJ, un appel en amont suffit pour caler le set."}
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps à l'avance faut-il réserver ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Pour un mariage, idéalement 6 à 12 mois à l'avance, surtout pour les samedis de mai à septembre. Des dates restent disponibles à 2-3 mois selon le calendrier — Hélion répond sous 24h à toute demande."}
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://helionsax.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Saxophoniste Mariage", "item": "https://helionsax.com/mariage/"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============ TOP BAR AVEC NAVIGATION ============ -->
+<div class="top-bar">
+    <div class="social-icons">
+        <a href="https://www.instagram.com/helionsaxx" target="_blank" rel="noopener" aria-label="Instagram Hélion Sax"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@mdlg3721" target="_blank" rel="noopener" aria-label="YouTube Hélion Sax"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@helionsaxx" target="_blank" rel="noopener" aria-label="TikTok Hélion Sax"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <div class="logo">
+        <a href="/"><img src="/images/logo.png" alt="Logo Hélion Sax saxophoniste Paris"></a>
+    </div>
+    <nav class="main-nav">
+        <a href="/">Accueil</a>
+        <a href="/mariage/" class="active">Mariage</a>
+        <a href="/entreprise/">Entreprise</a>
+        <a href="/tarifs/">Tarifs</a>
+        <a href="/a-propos/">À propos</a>
+        <a href="/#devis-contact">Contact</a>
+    </nav>
+</div>
+
+<!-- ============ HERO DE PAGE ============ -->
+<section style="background: #0a0a0a; color: #fff; padding: 180px 5% 80px; text-align: center; position: relative;">
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'Ariane" style="margin-bottom: 30px; font-size: 0.85rem; opacity: 0.7;">
+        <a href="/" style="color: #d4af37; text-decoration: none;">Accueil</a>
+        <span style="margin: 0 10px;">›</span>
+        <span>Saxophoniste Mariage</span>
+    </nav>
+    
+    <div class="luxury-frame" style="display: inline-block; border: 3px solid #b8860b; padding: 1.5rem 3rem; border-radius: 20px; margin-bottom: 30px;">
+        <h1 style="font-size: 2.5rem; font-family: 'Playfair Display', serif; margin: 0; letter-spacing: 2px; line-height: 1.2;">
+            Saxophoniste pour votre <span class="gold" style="color: #d4af37;">Mariage</span><br>
+            à Paris et en Île-de-France
+        </h1>
+    </div>
+    
+    <p style="font-size: 1.3rem; margin-top: 20px; opacity: 0.9; max-width: 700px; margin-left: auto; margin-right: auto;">
+        Une ambiance musicale live qui transforme chaque instant de votre journée en souvenir.
+    </p>
+    
+    <a href="/#devis-contact" class="btn-reserve" style="margin-top: 30px; display: inline-block;">Demander un devis mariage</a>
+</section>
+
+<!-- ============ INTRO ============ -->
+<section class="vibe-heliion-luxe" style="padding: 80px 0;">
+    <div class="vibe-content-wrapper" style="max-width: 900px; text-align: center;">
+        <h2 class="section-title" style="font-size: 2.2rem;">Le saxophone, la signature sonore qui change tout</h2>
+        <p style="font-size: 1.2rem; line-height: 1.8; color: #3a2b1f;">
+            Un mariage réussi se joue dans les détails. Le son d'un saxophone <strong>live</strong> transforme une cérémonie en moment suspendu, un vin d'honneur en expérience raffinée, et une soirée en énergie qui ne retombe jamais. Hélion Sax se produit lors de mariages à Paris et en Île-de-France depuis plusieurs années, avec une approche sur mesure pour chaque couple.
+        </p>
+    </div>
+</section>
+
+<!-- ============ 3 MOMENTS CLÉS DU MARIAGE ============ -->
+<section class="vibe-heliion-luxe" style="padding: 40px 0 100px; background: #f7f0e8;">
+    <div class="vibe-content-wrapper">
+        <h2 class="section-title">Trois moments, une ambiance sur mesure</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px;">
+            
+            <!-- Cérémonie -->
+            <div style="background: #fff; padding: 40px 30px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border-top: 4px solid #b8860b;">
+                <div style="font-size: 2.5rem; color: #b8860b; margin-bottom: 15px;">💍</div>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #38241a; margin-bottom: 15px;">La cérémonie</h3>
+                <p style="line-height: 1.7; color: #3a2b1f;">
+                    Entrée des mariés, échange des vœux, signature des registres, sortie festive. Hélion Sax accompagne les temps forts de la cérémonie (laïque, civile ou religieuse) avec un répertoire <strong>jazz, classique ou moderne</strong> selon votre univers. Possibilité d'adapter une chanson qui compte pour vous.
+                </p>
+            </div>
+            
+            <!-- Vin d'honneur -->
+            <div style="background: #fff; padding: 40px 30px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border-top: 4px solid #b8860b;">
+                <div style="font-size: 2.5rem; color: #b8860b; margin-bottom: 15px;">🥂</div>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #38241a; margin-bottom: 15px;">Le vin d'honneur</h3>
+                <p style="line-height: 1.7; color: #3a2b1f;">
+                    Ambiance <strong>jazz lounge ou bossa nova</strong>, Hélion se déplace parmi vos invités pour créer une proximité musicale. Idéal pour les cocktails en terrasse, en jardin ou dans un espace intérieur élégant. Durée type : 1h à 2h.
+                </p>
+            </div>
+            
+            <!-- Soirée -->
+            <div style="background: #fff; padding: 40px 30px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border-top: 4px solid #b8860b;">
+                <div style="font-size: 2.5rem; color: #b8860b; margin-bottom: 15px;">🎷</div>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #38241a; margin-bottom: 15px;">La soirée dansante</h3>
+                <p style="line-height: 1.7; color: #3a2b1f;">
+                    C'est là que le saxophone passe en mode <strong>énergie</strong> : house, afro house, funk, R&amp;B. En duo avec votre DJ (format très demandé), Hélion intervient en live sur les temps forts pour faire exploser le dancefloor. Plusieurs sets dans la soirée, entre 3 et 6 prises.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FORMULE DJ + SAX ============ -->
+<section class="vibe-heliion-luxe" style="padding: 80px 0;">
+    <div class="vibe-content-wrapper">
+        <div class="vibe-row flex flex-col md:flex-row gap-8 items-center">
+            <div class="vibe-text md:w-1/2 space-y-4">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; color: #38241a;">La formule DJ + Saxophone live</h3>
+                <p>Le <span>saxophone live sur un set DJ</span> est devenu <span>LE format signature</span> des mariages modernes. Le DJ tient l'ambiance, Hélion apporte les <span>moments d'émotion</span> : une ligne mélodique sur un morceau qui monte, un solo improvisé sur un drop, une intervention remarquée sur la première danse.</p>
+                <p>Hélion Sax collabore régulièrement avec des <span>DJs partenaires</span> à Paris et peut vous recommander un DJ avec qui il joue en harmonie parfaite. Si vous avez déjà votre DJ, aucun problème : une prise de contact en amont permet de caler le set.</p>
+            </div>
+            <div class="vibe-video md:w-1/2 w-full flex justify-center">
+                <div class="relative w-full aspect-[9/16] max-w-[360px] mx-auto rounded-lg overflow-hidden shadow-lg youtube-lazy" data-videoid="omsskrxWOqE"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ TÉMOIGNAGE MARIAGE ============ -->
+<section class="clients" style="padding: 80px 0;">
+    <h2 class="clients-title">Ce que disent les mariés</h2>
+    <div class="client-slider">
+        <div class="client-slide active" style="display: flex;">
+            <div class="client-photo">
+                <img src="/images/mariage.jfif" alt="Avis mariage Marion et Charles — saxophoniste Hélion Sax Paris" loading="lazy" decoding="async">
+            </div>
+            <div class="client-content">
+                <p class="client-quote">« Hélion Sax a vraiment marqué notre mariage. Il a su créer une ambiance magique, douce au début puis festive quand la soirée a commencé. Tous nos invités nous en ont parlé ensuite. En plus d'être très pro, il dégage une vraie énergie positive, on sent qu'il aime ce qu'il fait. »</p>
+                <h3 class="client-name">Marion et Charles, mariés en juin 2025</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FAQ MARIAGE ============ -->
+<section class="vibe-heliion-luxe" style="padding: 60px 0 80px;">
+    <div class="vibe-content-wrapper" style="max-width: 900px;">
+        <h2 class="section-title">Questions fréquentes sur le saxophone de mariage</h2>
+        
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; color: #38241a;">Pouvez-vous apprendre des morceaux spécialement pour notre mariage ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">Oui, sans problème. C'est même quelque chose qu'Hélion fait régulièrement. Si vous avez <strong>une chanson qui compte pour vous</strong> — pour l'entrée des mariés, la première danse ou n'importe quel moment — il l'apprend et l'interprète à sa façon, avec sa couleur. Partagez-lui vos envies musicales lors du premier contact, il s'adapte à tout.</p>
+        </details>
+
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; color: #38241a;">Combien de temps dure une prestation mariage ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">C'est entièrement flexible. Hélion peut intervenir <strong>une demi-heure</strong> pour habiller un moment précis (entrée des mariés, ouverture de bal), comme jouer <strong>plusieurs heures</strong> sur l'ensemble de la journée — cérémonie, vin d'honneur et soirée. Tout se définit selon votre programme et votre budget lors de la demande de devis.</p>
+        </details>
+
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; color: #38241a;">Jouez-vous seul ou avec d'autres musiciens ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">Les deux. Hélion se produit très souvent <strong>en solo</strong>, ce qui est largement suffisant pour créer une ambiance complète. Mais il travaille aussi avec des <strong>musiciens partenaires de confiance</strong> : pianiste, guitariste, chanteur. Si votre mariage appelle une <strong>formation live plus complète</strong>, c'est possible — il monte le groupe selon vos besoins et votre budget.</p>
+        </details>
+
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; color: #38241a;">Vous déplacez-vous hors de Paris ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">Oui, et sans contrainte. Hélion est <strong>véhiculé</strong> et se déplace partout : Paris, toute l'Île-de-France, la France entière, et l'international pour les événements qui le justifient. Il a notamment joué au <strong>Domaine du Chesney</strong> en dehors de Paris. Les frais de déplacement éventuels sont précisés dans le devis, en toute transparence.</p>
+        </details>
+
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; color: #38241a;">Vous avez des DJs partenaires à recommander ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">Oui. Hélion a construit au fil des années un <strong>réseau de DJs partenaires</strong> avec qui il joue régulièrement. Si vous n'avez pas encore de DJ, il peut vous en recommander un avec qui la complicité est déjà là — ce qui change tout sur la qualité du rendu en soirée. Si vous avez déjà votre DJ, pas de problème : un appel en amont suffit pour caler le set ensemble.</p>
+        </details>
+
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; color: #38241a;">À quels moments du mariage intervient le saxophone ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">Le sax s'intègre naturellement aux trois temps du mariage : <strong>la cérémonie</strong> (entrée, vœux, sortie) pour l'émotion, <strong>le vin d'honneur</strong> (ambiance jazz et lounge, déambulation parmi les invités) pour la chaleur, et <strong>la soirée dansante</strong> (house, afro house, énergie live sur le dancefloor) pour la fête. Hélion peut couvrir un seul de ces moments ou les trois — c'est vous qui choisissez.</p>
+        </details>
+
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; color: #38241a;">Combien de temps à l'avance faut-il réserver ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">Pour un mariage, idéalement <strong>6 à 12 mois à l'avance</strong>, surtout pour les samedis de mai à septembre qui partent très vite. Des dates restent disponibles à 2-3 mois selon le calendrier — n'hésitez pas à demander même tardivement, Hélion vous répond sous 24h.</p>
+        </details>
+    </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); color: #fff; padding: 80px 5%; text-align: center;">
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 20px;">Prêt(e) à parler de votre mariage&nbsp;?</h2>
+    <p style="font-size: 1.2rem; opacity: 0.85; margin-bottom: 35px; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Dites-moi la date, le lieu, vos envies musicales. Je vous fais un devis sur mesure sous 24&nbsp;h.
+    </p>
+    <a href="/#devis-contact" class="btn-reserve" style="display: inline-block;">Demander un devis gratuit</a>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+    <p>Hélion Sax – Saxophoniste Événementiel à Paris | Shows Live &amp; Soirées Uniques</p>
+    <div class="footer-social">
+        <a href="https://www.instagram.com/helionsaxx" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@mdlg3721" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@helionsaxx" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <p>Contact : <a href="tel:+33695281906" style="color: inherit;">06 95 28 19 06</a> | Email : <a href="mailto:contact@helionsax.com" style="color: inherit;">contact@helionsax.com</a></p>
+    <p>© 2026 Hélion Sax — Tous droits réservés</p>
+</footer>
+
+<script src="/script.js" defer></script>
+</body>
+</html>
