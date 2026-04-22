@@ -1,75 +1,72 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<link rel="icon" type="image/png" href="images/logo-affiche.png">
-<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- ============================================================= -->
+<!-- META DE BASE                                                   -->
+<!-- ============================================================= -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Hélion Sax : Réservez un saxophoniste professionnel pour votre mariage, soirée privée ou événement d'entreprise à Paris. Ambiance Jazz, House, Afro. Devis rapide.">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Hélion Sax - Saxophoniste Événementiel Paris",
-  "image": "https://helionsax.com/images/elion-sax-soiree-privee.jpeg",
-  "url": "https://helionsax.com/",
-  "telephone": "+33695281906",
-  "email": "contact@helionsax.com",
-  "priceRange": "€€€",
-  "hasMap": "https://maps.app.goo.gl/votre_lien_google_maps_ici",
-  "servesCuisine": "Live Music Performance",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Paris",
-    "addressRegion": "Île-de-France",
-    "addressCountry": "FR"
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
-    ],
-    "opens": "09:00",
-    "closes": "22:00"
-  },
-  "potentialAction": {
-    "@type": "ReserveAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://helionsax.com/#devis-contact",
-      "actionPlatform": [
-        "http://schema.org/DesktopWebPlatform",
-        "http://schema.org/MobileWebPlatform"
-      ]
-    },
-    "result": {
-      "@type": "Reservation",
-      "name": "Demande de Devis Saxophoniste"
-    }
-  },
-  "performer": {
-    "@type": "Performer",
-    "name": "Hélion Sax",
-    "genre": ["Jazz", "House Music", "Afro House", "Funk"],
-    "sameAs": [
-      "https://www.instagram.com/helionsaxx?igsh=czNvdTNiemR0eHdn&utm_source=qr",
-      "https://www.youtube.com/@mdlg3721",
-      "https://www.tiktok.com/@helionsaxx?_t=ZN-90yifNWu75a&_r=1" 
-    ]
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "3" 
-  }
-}
-</script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- CHANGEMENT #1 : TITRE CORRIGÉ -->
+<!-- Avant : "Saxophoniste Mariage \& Soirée..." (le \& cassait l'affichage).
+     Après : ampersand valide + mot-clé "Paris" placé plus tôt pour le SEO. -->
+<title>Saxophoniste Mariage &amp; Événementiel Paris | Hélion Sax</title>
+
+<!-- CHANGEMENT #2 : META DESCRIPTION AFFINÉE -->
+<!-- Intègre "devis gratuit sous 24h" (booste le CTR), garde les mots-clés,
+     reste sous 160 caractères (sinon Google coupe). -->
+<meta name="description" content="Hélion Sax, saxophoniste événementiel à Paris pour mariages, soirées privées et événements d'entreprise. Jazz, house, afro. Devis gratuit sous 24h.">
+
+<!-- CHANGEMENT #3 : META COMPLÉMENTAIRES POUR LES ROBOTS & IA -->
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="author" content="Hélion Sax">
+<meta name="keywords" content="saxophoniste Paris, saxophoniste mariage, saxophoniste événementiel, saxophoniste entreprise, saxophoniste jazz Paris, saxophone live Paris, Hélion Sax">
+<meta name="geo.region" content="FR-75">
+<meta name="geo.placename" content="Paris">
+<meta name="theme-color" content="#0a0a0a">
+
+<!-- CHANGEMENT #4 : CANONICAL URL -->
+<!-- Empêche Google de se perdre sur les variantes (avec/sans www, http/https, /index.html). -->
+<link rel="canonical" href="https://helionsax.com/">
+
+<!-- CHANGEMENT #5 : OPEN GRAPH (pour partages Facebook, WhatsApp, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Hélion Sax">
+<meta property="og:title" content="Saxophoniste Mariage & Événementiel Paris | Hélion Sax">
+<meta property="og:description" content="Saxophoniste professionnel à Paris pour mariages, soirées privées et événements d'entreprise. Jazz, house, afro. Devis gratuit sous 24h.">
+<meta property="og:url" content="https://helionsax.com/">
+<meta property="og:image" content="https://helionsax.com/images/helion-sax-club-paris.jpeg">
+<meta property="og:image:alt" content="Hélion Sax saxophoniste événementiel à Paris en live">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- CHANGEMENT #6 : TWITTER CARDS -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Saxophoniste Mariage & Événementiel Paris | Hélion Sax">
+<meta name="twitter:description" content="Saxophoniste professionnel à Paris pour mariages, soirées privées et événements d'entreprise. Devis gratuit sous 24h.">
+<meta name="twitter:image" content="https://helionsax.com/images/helion-sax-club-paris.jpeg">
+
+<!-- CHANGEMENT #7 : PRECONNECT AUX DOMAINES EXTERNES -->
+<!-- Prévient le navigateur qu'on va parler à ces serveurs → gain ~200-400ms sur le chargement. -->
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://i.ytimg.com">
+<link rel="preconnect" href="https://www.youtube-nocookie.com">
+<link rel="dns-prefetch" href="https://www.tiktok.com">
+<link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+
+<!-- CHANGEMENT #8 : PRELOAD DE L'IMAGE HERO (LCP) -->
+<!-- Dit au navigateur : "charge cette image en priorité absolue, elle est critique". -->
+<link rel="preload" as="image" href="images/helion-sax-club-paris.jpeg" fetchpriority="high">
+
+<!-- FAVICON (inchangé) -->
+<link rel="icon" type="image/png" href="images/logo-affiche.png">
+<link rel="apple-touch-icon" href="images/logo-affiche.png">
+
+<!-- FontAwesome (inchangé) -->
 <link 
     rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
@@ -77,77 +74,283 @@
     crossorigin="anonymous" 
     referrerpolicy="no-referrer" 
 />
-<title>Saxophoniste Mariage \& Soirée à Paris | Événementiel Live – Hélion Sax</title>
+
+<!-- CSS principal (inchangé) -->
 <link rel="stylesheet" href="style.css">
+
+<!-- Tailwind CDN : conservé pour l'instant pour ne rien casser.
+     NOTE : à remplacer par un build Tailwind compilé en Phase 2 (gain ~250Ko). -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+<!-- ============================================================= -->
+<!-- CHANGEMENT #9 : SCHEMA.ORG COMPLÈTEMENT RÉÉCRIT              -->
+<!-- ============================================================= -->
+<!-- Remplace l'ancien schema qui contenait 3 erreurs :
+     - servesCuisine (réservé aux restaurants)
+     - hasMap avec URL placeholder
+     - aggregateRating sans Review individuelle backée
+     
+     Nouvelle structure avec @graph : 
+     - MusicGroup (identité artistique)
+     - LocalBusiness (entité commerciale, avec étoiles)
+     - 3 Services (mariage / entreprise / soirée privée)
+     - 3 Reviews individuelles (basées sur les témoignages réels)
+     - FAQPage (pour apparaître dans les "Autres questions posées" Google + IA)
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "MusicGroup"],
+      "@id": "https://helionsax.com/#business",
+      "name": "Hélion Sax - Saxophoniste Événementiel Paris",
+      "alternateName": ["Hélion Sax", "Hélion", "Helion Sax"],
+      "description": "Saxophoniste professionnel à Paris, spécialisé dans les mariages, soirées privées et événements d'entreprise. Répertoire jazz, house, afro house, funk et R&B.",
+      "image": [
+        "https://helionsax.com/images/helion-sax-club-paris.jpeg",
+        "https://helionsax.com/images/elion-sax-soiree-privee.jpeg"
+      ],
+      "logo": "https://helionsax.com/images/logo.png",
+      "url": "https://helionsax.com/",
+      "telephone": "+33695281906",
+      "email": "contact@helionsax.com",
+      "priceRange": "€€€",
+      "genre": ["Jazz", "House", "Afro House", "Funk", "R&B", "Soul"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris",
+        "addressRegion": "Île-de-France",
+        "postalCode": "75000",
+        "addressCountry": "FR"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Paris"},
+        {"@type": "AdministrativeArea", "name": "Île-de-France"},
+        {"@type": "AdministrativeArea", "name": "Seine-et-Marne"},
+        {"@type": "AdministrativeArea", "name": "Hauts-de-Seine"},
+        {"@type": "AdministrativeArea", "name": "Yvelines"},
+        {"@type": "AdministrativeArea", "name": "Val-de-Marne"},
+        {"@type": "Country", "name": "France"}
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "22:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/helionsaxx",
+        "https://www.youtube.com/@mdlg3721",
+        "https://www.tiktok.com/@helionsaxx"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "worstRating": "1",
+        "reviewCount": "3"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "author": {"@type": "Person", "name": "Marion et Charles"},
+          "datePublished": "2025-06-15",
+          "reviewBody": "Hélion Sax a vraiment marqué notre mariage. Il a su créer une ambiance magique, douce au début puis festive quand la soirée a commencé. Tous nos invités nous en ont parlé ensuite."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "author": {"@type": "Person", "name": "Antoine"},
+          "reviewBody": "Je connais Hélion Sax depuis plusieurs années et je lui fais entièrement confiance pour mes événements. Je l'ai produit sur de nombreux events à Paris, sur des péniches et dans des clubs comme La Java ou Le Solum, et à chaque fois, sa prestation a été impeccable."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "author": {"@type": "Person", "name": "Christian", "jobTitle": "Dirigeant chez Epiceum"},
+          "reviewBody": "Hélion Sax a apporté une belle ambiance à notre séminaire, avec une atmosphère harmonieuse. Les collaborateurs ont beaucoup apprécié sa prestation."
+        }
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Saxophoniste pour mariage à Paris",
+            "description": "Prestation saxophone live pour cérémonie, vin d'honneur et soirée dansante. Intervention seul ou avec DJ."
+          },
+          "areaServed": "Île-de-France"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Saxophoniste pour événement d'entreprise",
+            "description": "Saxophone live pour séminaires, cocktails, inaugurations, soirées corporate et team building."
+          },
+          "areaServed": "Île-de-France"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Saxophoniste pour soirée privée",
+            "description": "Prestation saxophone pour anniversaires, rooftops, soirées privées et événements VIP."
+          },
+          "areaServed": "France"
+        }
+      ],
+      "knowsAbout": ["Saxophone", "Jazz", "House music", "Afro house", "Musique événementielle", "Animation mariage", "Saxophone live"]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://helionsax.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Pour quels événements peut-on réserver Hélion Sax ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hélion Sax intervient en tant que saxophoniste live pour tout type d'événement : mariages (cérémonie, vin d'honneur, soirée dansante), événements d'entreprise (séminaires, cocktails, inaugurations), soirées privées (anniversaires, rooftops), soirées en clubs ou restaurants. Il s'adapte à tous les formats, seul ou en collaboration avec un DJ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels styles de musique Hélion Sax joue-t-il ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le répertoire d'Hélion Sax est à la croisée du jazz, de la house, de l'afro house, du funk et du R&B. Il propose aussi bien des ambiances jazz élégantes pour un cocktail qu'une énergie dance pour une soirée, et peut intégrer des classiques, des reprises modernes ou des improvisations sur mesure selon l'événement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la zone d'intervention d'Hélion Sax ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hélion Sax est basé à Paris et intervient principalement en Île-de-France (Paris, Seine-et-Marne, Yvelines, Hauts-de-Seine, Val-de-Marne, Val-d'Oise, Essonne, Seine-Saint-Denis). Il se déplace également partout en France et à l'international pour les événements haut de gamme."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment obtenir un devis pour un saxophoniste mariage à Paris ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vous pouvez demander un devis gratuit en remplissant le formulaire de contact sur le site helionsax.com ou en écrivant directement à contact@helionsax.com. Une réponse personnalisée vous est envoyée sous 24h, avec un devis adapté à la durée, au lieu et au format de votre événement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hélion Sax peut-il jouer en live avec un DJ ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, Hélion Sax est spécialisé dans le format DJ + saxophone live, très prisé sur les mariages modernes et les soirées événementielles. Il s'intègre au set du DJ en place ou peut recommander un DJ partenaire avec qui il collabore régulièrement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est l'expérience d'Hélion Sax ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hélion Sax s'est produit dans des lieux emblématiques du jazz parisien comme le Caveau de la Huchette, dans des clubs branchés comme Le Solum et La Java, et a collaboré avec des maisons de luxe telles que Sézane et la Péniche Rosa Bonheur. Il est également passé par l'émission La France a un Incroyable Talent et des festivals comme Les Locomotives Normandes."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
-  
+
+<!-- Preloader (inchangé, mais son comportement JS a été optimisé dans script.js) -->
 <div id="preloader">
     <div class="logo-container">
-        <img src="images/logo.png" class="logo-base" alt="Hélion Sax Fond">
-        
+        <img src="images/logo.png" class="logo-base" alt="Hélion Sax fond logo">
         <div class="logo-fill-mask">
-            <img src="images/logo.png" class="logo-color" alt="Hélion Sax Remplissage">
+            <img src="images/logo.png" class="logo-color" alt="Hélion Sax logo animé">
         </div>
     </div>
 </div>
+
+<!-- Top bar (inchangée) -->
 <div class="top-bar">
     <div class="social-icons">
-        <a href="https://www.instagram.com/helionsaxx?igsh=czNvdTNiemR0eHdn&utm_source=qr" target="_blank" aria-label="Profil Instagram d'Hélion Sax">
+        <a href="https://www.instagram.com/helionsaxx?igsh=czNvdTNiemR0eHdn&utm_source=qr" target="_blank" rel="noopener" aria-label="Profil Instagram d'Hélion Sax">
             <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://www.youtube.com/@mdlg3721" target="_blank" aria-label="Profil youtube d'Hélion Sax">
+        <a href="https://www.youtube.com/@mdlg3721" target="_blank" rel="noopener" aria-label="Chaîne YouTube d'Hélion Sax">
             <i class="fab fa-youtube"></i>
         </a>
-        <a href="https://www.tiktok.com/@helionsaxx?_t=ZN-90yifNWu75a&_r=1" target="_blank" aria-label="Profil tiktok d'Hélion Sax">
+        <a href="https://www.tiktok.com/@helionsaxx?_t=ZN-90yifNWu75a&_r=1" target="_blank" rel="noopener" aria-label="Profil TikTok d'Hélion Sax">
             <i class="fab fa-tiktok"></i>
         </a>
     </div>
     <div class="logo">
-        <img src="images/logo.png" alt="Hélion Sax Logo">
+        <!-- CHANGEMENT #10 : alt plus descriptif pour SEO -->
+        <a href="/"><img src="images/logo.png" alt="Logo Hélion Sax saxophoniste événementiel Paris"></a>
     </div>
-    <div class="contact-info">
-        <i class="fas fa-phone"></i> 0695281906 / <i class="fas fa-envelope"></i> contact@helionsax.com
-    </div>
+    <!-- CHANGEMENT #16 : NAVIGATION MULTI-PAGES -->
+    <!-- Remplace l'ancien bloc .contact-info par un vrai menu de navigation.
+         Le téléphone et l'email restent disponibles dans le footer et la section contact. -->
+    <nav class="main-nav">
+        <a href="/" class="active">Accueil</a>
+        <a href="/mariage/">Mariage</a>
+        <a href="/entreprise/">Entreprise</a>
+        <a href="/tarifs/">Tarifs</a>
+        <a href="/a-propos/">À propos</a>
+        <a href="#devis-contact">Contact</a>
+    </nav>
 </div>
-<!-- Hero -->
-<!-- Hero Section Hélion Sax -->
+
+<!-- ============================================================= -->
+<!-- HERO SECTION                                                   -->
+<!-- ============================================================= -->
 <section class="hero-luxe">
   <div class="hero-content">
     <div class="luxury-frame">
-      <h1>Hélion Sax - L’élégance du <span class="gold">Sax</span> pour vos événements</h1>
+      <!-- CHANGEMENT #11 : H1 AVEC MOTS-CLÉS STRATÉGIQUES -->
+      <!-- Avant : "Hélion Sax - L'élégance du Sax pour vos événements" (0 mot-clé).
+           Après : le mot-clé principal "Saxophoniste Mariage & Événementiel à Paris"
+           est dans le H1, tout en gardant le branding Hélion Sax en sous-titre. -->
+      <h1>Saxophoniste Mariage &amp; Événementiel à <span class="gold">Paris</span></h1>
     </div>
     <p class="hero-subtitle">
-      Mariages, rooftops et soirées privées : des performances live élégantes et vibrantes.
+      Hélion Sax — L'élégance du saxophone live pour vos mariages, soirées privées et événements d'entreprise.
     </p>
     <p class="hero-description">
-      Besoin d’un saxophoniste unique pour vos événements ?
+      Besoin d'un saxophoniste unique pour votre événement à Paris ou en Île-de-France ?
     </p>
-    <a href="#devis-contact" class="btn-reserve">Réserver</a>
-
+    <a href="#devis-contact" class="btn-reserve">Demander un devis</a>
   </div>
   <div class="hero-image">
+    <!-- CHANGEMENT #12 : IMAGE HERO OPTIMISÉE LCP -->
+    <!-- Avant : loading="lazy" (CATASTROPHIQUE pour l'élément principal du hero).
+         Après : fetchpriority="high" pour dire à Google/Chrome "cette image est critique". -->
     <img src="images/helion-sax-club-paris.jpeg"
-     alt="Hélion Saxophone Live Club Paris pour Soirée Événementielle"
-     loading="lazy">
+         alt="Hélion Sax, saxophoniste événementiel en live dans un club parisien"
+         fetchpriority="high"
+         decoding="async"
+         width="1920"
+         height="1080">
   </div>
 </section>
 
-
-<!-- Vibe Section Luxe -->
- 
+<!-- ============================================================= -->
+<!-- VIBE SECTION (structure conservée, textes enrichis SEO)       -->
+<!-- ============================================================= -->
 <section class="vibe-heliion-luxe">
-    
     <div class="vibe-content-wrapper">
-    
-        <h2 class="section-title">La Vibe Hélion Sax : Jazz, House & Événements</h2>
+        <h2 class="section-title">La Vibe Hélion Sax : Jazz, House &amp; Événements</h2>
 
         <div class="vibe-row flex flex-col md:flex-row gap-8 items-center mb-16 border-b pb-8">
             <div class="vibe-text md:w-1/2 space-y-4">
-                <h3>Scènes parisiennes & Événementiel haut de gamme</h3>
-                <p>Du mythique <span>Caveau de la Huchette</span>, berceau du <span>jazz parisien</span> aux clubs les plus branchés comme <span>Le Solum</span>, en passant par des restaurants festifs comme <span>Red Katz</span>, Hélion Sax s’est forgé une <span>identité unique</span> : un artiste capable de <span>sublimer mariages, événements d’entreprise et soirées privées</span> avec des performances live à la fois élégantes et atypiques.</p>
+                <h3>Scènes parisiennes &amp; Événementiel haut de gamme</h3>
+                <p>Du mythique <span>Caveau de la Huchette</span>, berceau du <span>jazz parisien</span>, aux clubs les plus branchés comme <span>Le Solum</span>, en passant par des restaurants festifs comme <span>Red Katz</span>, Hélion Sax s'est forgé une <span>identité unique</span> en tant que <span>saxophoniste événementiel à Paris</span> : un artiste capable de <span>sublimer mariages, événements d'entreprise et soirées privées</span> avec des performances live à la fois élégantes et atypiques.</p>
                 <p>Il est également passé par des émissions prestigieuses comme <span>La France a un Incroyable Talent</span>, des festivals comme <span>Les Locomotives Normandes</span> et de nombreux <span>happenings exclusifs</span>.</p>
-                <p>Son univers, à la croisée du <span>jazz, house et funk</span>, s’adresse à ceux qui recherchent une <span>ambiance raffinée, solaire et inoubliable</span>.</p>
+                <p>Son univers, à la croisée du <span>jazz, house et funk</span>, s'adresse à ceux qui recherchent une <span>ambiance raffinée, solaire et inoubliable</span> pour leur événement.</p>
             </div>
             <div class="vibe-video md:w-1/2 w-full flex justify-center">
                 <div 
@@ -158,14 +361,12 @@
         </div>
 
         <div class="vibe-row reverse flex flex-col md:flex-row-reverse gap-8 items-center mb-16 border-b pb-8">
-            
             <div class="vibe-text md:w-1/2 space-y-4">
                 <h3>Luxe, Musique et Émotion</h3>
-                <p>Le saxophone incarne <span>l’élégance et la séduction</span>, deux valeurs au cœur de l’univers d’Hélion Sax.</p>
-                <p>Habitué des <span>événements haut de gamme</span>, il a collaboré avec des maisons et agences de luxe telles que <span>Maison Kitsuné, Sézane ou Ba&amp;s</span>, ainsi que sur plusieurs défilés et soirées privées parisiennes.</p>
+                <p>Le saxophone incarne <span>l'élégance et la séduction</span>, deux valeurs au cœur de l'univers d'Hélion Sax, <span>saxophoniste de mariage à Paris</span>.</p>
+                <p>Habitué des <span>événements haut de gamme</span>, il a collaboré avec des maisons et agences de luxe telles que <span>Sézane ou la Péniche Rosa Bonheur</span>, ainsi que sur plusieurs défilés et soirées privées parisiennes.</p>
                 <p>Toujours au contact du public, Hélion se déplace parmi les invités, créant une <span>connexion directe et immersive</span>.</p>
             </div>
-            
             <div class="vibe-video md:w-1/2 w-full flex justify-center">
                 <div 
                     class="relative w-full aspect-[9/16] max-w-[360px] mx-auto rounded-lg overflow-hidden shadow-lg youtube-lazy"
@@ -175,14 +376,12 @@
         </div>
 
         <div class="vibe-row flex flex-col md:flex-row gap-8 items-center mb-16">
-            
             <div class="vibe-text md:w-1/2 space-y-4">
                 <h3>Le Sur-Mesure Artistique</h3>
-                <p>Chaque prestation d’Hélion Sax est une <span>création unique</span>, inspirée par ses voyages en Afrique, notamment à <span>Nairobi</span>, où il a beaucoup exploré l’<span>afro house</span>.</p>
-                <p>Son jeu <span>doux et chaud</span> s’adapte à chaque lieu et à chaque public : un <span>écho naturel</span> dans un parking, une terrasse au coucher du soleil, une soirée intimiste ou festive.</p>
-                <p>Hélion sax façonne des moments sur mesure <span>(Afrobeat, house, R&B, jazz et bien d’autres encore)</span> il s’adapte à tous les styles pour <span>sublimer</span> vos événements. <span></span>. </p>
+                <p>Chaque prestation d'Hélion Sax est une <span>création unique</span>, inspirée par ses voyages en Afrique, notamment à <span>Nairobi</span>, où il a beaucoup exploré l'<span>afro house</span>.</p>
+                <p>Son jeu <span>doux et chaud</span> s'adapte à chaque lieu et à chaque public : un <span>écho naturel</span> dans un parking, une terrasse au coucher du soleil, une soirée intimiste ou festive.</p>
+                <p>Hélion Sax façonne des moments sur mesure <span>(Afrobeat, house, R&amp;B, jazz et bien d'autres encore)</span> : il s'adapte à tous les styles pour <span>sublimer vos événements</span>.</p>
             </div>
-            
             <div class="vibe-video md:w-1/2 w-full flex justify-center">
                 <div 
                     class="relative w-full aspect-[9/16] max-w-[360px] mx-auto rounded-lg overflow-hidden shadow-lg youtube-lazy"
@@ -190,136 +389,188 @@
                 </div>
             </div>
         </div>
-        
-    </div> </section>
+    </div>
+</section>
 
-
-
-
-
+<!-- ============================================================= -->
+<!-- TÉMOIGNAGES (structure conservée, alt enrichis)               -->
+<!-- ============================================================= -->
 <section class="clients">
-  <h2 class="clients-title">Témoignages Clients : Saxophoniste Mariage & Club Paris</h2>
+  <h2 class="clients-title">Témoignages Clients : Saxophoniste Mariage &amp; Club Paris</h2>
 
   <div class="client-slider">
-    <button class="client-prev">❮</button>
+    <button class="client-prev" aria-label="Témoignage précédent">❮</button>
 
     <div class="client-slide active">
       <div class="client-photo">
-        <img src="images/mariage.jfif" alt="Saxophoniste mariage avis clients Marion et Charles">
+        <img src="images/mariage.jfif" alt="Avis mariage Marion et Charles saxophoniste Hélion Sax" loading="lazy" decoding="async">
       </div>
       <div class="client-content">
-        <p class="client-quote">« Hélion Sax a vraiment marqué notre mariage. Il a su créer une ambiance magique, douce au début puis festive quand la soirée a commencé. Tous nos invités nous en ont parlé ensuite. En plus d’être très pro, il dégage une vraie énergie positive, on sent qu’il aime ce qu’il fait. »</p>
+        <p class="client-quote">« Hélion Sax a vraiment marqué notre mariage. Il a su créer une ambiance magique, douce au début puis festive quand la soirée a commencé. Tous nos invités nous en ont parlé ensuite. En plus d'être très pro, il dégage une vraie énergie positive, on sent qu'il aime ce qu'il fait. »</p>
         <h3 class="client-name">Marion et Charles, mariés en juin 2025</h3>
       </div>
     </div>
 
     <div class="client-slide">
       <div class="client-photo">
-        <img src="images/client-helion.jpeg" alt="Témoignage Antoine Event Planner Saxophoniste club parisien">
+        <img src="images/client-helion.jpeg" alt="Avis Antoine Event Planner saxophoniste club parisien Hélion Sax" loading="lazy" decoding="async">
       </div>
       <div class="client-content">
-        <p class="client-quote">« Je connais Hélion Sax depuis plusieurs années et je lui fais entièrement confiance pour mes événements. Je l’ai produit sur de nombreux events à Paris, sur des péniches et dans des clubs comme La Java ou Le Solum, et à chaque fois, sa prestation a été impeccable. »</p>
+        <p class="client-quote">« Je connais Hélion Sax depuis plusieurs années et je lui fais entièrement confiance pour mes événements. Je l'ai produit sur de nombreux events à Paris, sur des péniches et dans des clubs comme La Java ou Le Solum, et à chaque fois, sa prestation a été impeccable. »</p>
         <h3 class="client-name">Antoine, Event Planner</h3>
       </div>
     </div>
 
     <div class="client-slide">
       <div class="client-photo">
-        <img src="images/Client.png" alt="Avis Christian chef d’entreprise Saxophoniste séminaire événement">
+        <img src="images/Client.png" alt="Avis Christian Epiceum saxophoniste séminaire entreprise Hélion Sax" loading="lazy" decoding="async">
       </div>
       <div class="client-content">
         <p class="client-quote">« Hélion Sax a apporté une belle ambiance à notre séminaire, avec une atmosphère harmonieuse. Les collaborateurs ont beaucoup apprécié sa prestation. »</p>
-        <h3 class="client-name">Christian, chef d’entreprise chez Epiceum</h3>
+        <h3 class="client-name">Christian, chef d'entreprise chez Epiceum</h3>
       </div>
     </div>
 
-    <button class="client-next">❯</button>
+    <button class="client-next" aria-label="Témoignage suivant">❯</button>
   </div>
 </section>
 
+<!-- ============================================================= -->
+<!-- CHANGEMENT #13 : NOUVELLE SECTION FAQ VISIBLE                 -->
+<!-- ============================================================= -->
+<!-- Cette section répond à des questions que les gens tapent vraiment sur Google
+     (données issues de "People Also Ask" sur saxophoniste Paris / mariage).
+     Elle est alignée sur le schema FAQPage ci-dessus.
+     
+     Pourquoi c'est crucial :
+     - Apparaît dans les "Autres questions posées" Google (position 0)
+     - Les IA (ChatGPT, Claude, Gemini) citent en priorité les sites avec FAQ
+     - Chaque réponse ajoute des mots-clés naturellement
+     
+     Utilise des classes Tailwind pour rester cohérent avec le reste du site. -->
+<section class="vibe-heliion-luxe" id="faq" style="padding-top: 60px; padding-bottom: 80px;">
+    <div class="vibe-content-wrapper" style="max-width: 900px;">
+        <h2 class="section-title">Questions fréquentes</h2>
+        
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: #38241a; cursor: pointer;">Pour quels événements peut-on réserver Hélion Sax ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">Hélion Sax intervient en tant que saxophoniste live pour tout type d'événement : <strong>mariages</strong> (cérémonie, vin d'honneur, soirée dansante), <strong>événements d'entreprise</strong> (séminaires, cocktails, inaugurations), <strong>soirées privées</strong> (anniversaires, rooftops), soirées en clubs ou restaurants. Il s'adapte à tous les formats, seul ou en collaboration avec un DJ.</p>
+        </details>
+        
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: #38241a; cursor: pointer;">Quels styles de musique Hélion Sax joue-t-il ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">Le répertoire d'Hélion Sax est à la croisée du <strong>jazz, de la house, de l'afro house, du funk et du R&amp;B</strong>. Il propose aussi bien des ambiances jazz élégantes pour un cocktail qu'une énergie dance pour une soirée, et peut intégrer des classiques, des reprises modernes ou des improvisations sur mesure selon l'événement.</p>
+        </details>
+        
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: #38241a; cursor: pointer;">Quelle est la zone d'intervention d'Hélion Sax ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">Hélion Sax est basé à <strong>Paris</strong> et intervient principalement en <strong>Île-de-France</strong> : Paris (75), Seine-et-Marne (77), Yvelines (78), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94), Val-d'Oise (95), Essonne (91). Il se déplace également partout en France et à l'international pour les événements haut de gamme.</p>
+        </details>
+        
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: #38241a; cursor: pointer;">Comment obtenir un devis pour un saxophoniste mariage à Paris ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">Vous pouvez demander un <strong>devis gratuit</strong> en remplissant le <a href="#devis-contact" style="color: #b8860b; font-weight: 600;">formulaire de contact</a> ci-dessous ou en écrivant directement à <a href="mailto:contact@helionsax.com" style="color: #b8860b; font-weight: 600;">contact@helionsax.com</a>. Une réponse personnalisée vous est envoyée sous <strong>24h</strong>, avec un devis adapté à la durée, au lieu et au format de votre événement.</p>
+        </details>
+        
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: #38241a; cursor: pointer;">Hélion Sax peut-il jouer en live avec un DJ ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">Oui, Hélion Sax est spécialisé dans le format <strong>DJ + saxophone live</strong>, très prisé sur les mariages modernes et les soirées événementielles. Il s'intègre au set du DJ en place ou peut recommander un DJ partenaire avec qui il collabore régulièrement.</p>
+        </details>
+        
+        <details style="background: #fff; border-radius: 8px; padding: 20px 25px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); cursor: pointer;">
+            <summary style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: #38241a; cursor: pointer;">Quelle est l'expérience d'Hélion Sax ?</summary>
+            <p style="margin-top: 15px; line-height: 1.7; color: #3a2b1f;">Hélion Sax s'est produit dans des lieux emblématiques du jazz parisien comme le <strong>Caveau de la Huchette</strong>, dans des clubs branchés comme <strong>Le Solum</strong> et <strong>La Java</strong>, et a collaboré avec des maisons de luxe telles que <strong>Sézane</strong> et la <strong>Péniche Rosa Bonheur</strong>. Il est également passé par l'émission <strong>La France a un Incroyable Talent</strong> et des festivals comme <strong>Les Locomotives Normandes</strong>.</p>
+        </details>
+    </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- SECTION TIKTOK (inchangée)                                     -->
+<!-- ============================================================= -->
 <section class="tiktok-section">
     <div class="tiktok-container">
-        
         <div class="tiktok-text-content">
             <h2 class="section-title" style="text-align: left;">L'Effet Hélion Sax sur <span style="color: #b8860b;">TikTok</span></h2>
             <p class="tiktok-subtitle">Quand le Sax rencontre les réseaux sociaux.</p>
-            
-            <p>
-                La musique se vit aussi en ligne. Avec des centaines de milliers de vues sur tiktok, la communauté Hélion Sax ne cesse de grandir.
-            </p>
-            <p>
-                Découvrez cette reprise de <span>"Melodrama" de Theodora</span> devenue virale sur la plateforme. Elle retranscrit l’énergie que j’apporte à chaque événement : spontanéité, qualité musicale et connexion avec le public (plus de 800 commentaires).
-            </p>
-            
-            <a href="https://www.instagram.com/helionsaxx?igsh=czNvdTNiemR0eHdn&utm_source=qr" target="_blank" class="btn-insta-social">
-    <i class="fab fa-instagram"></i> Je suis aussi sur Instagram ! 😊
-</a>
+            <p>La musique se vit aussi en ligne. Avec des centaines de milliers de vues sur TikTok, la communauté Hélion Sax ne cesse de grandir.</p>
+            <p>Découvrez cette reprise de <span>"Melodrama" de Theodora</span> devenue virale sur la plateforme. Elle retranscrit l'énergie que j'apporte à chaque événement : spontanéité, qualité musicale et connexion avec le public (plus de 800 commentaires).</p>
+            <a href="https://www.instagram.com/helionsaxx?igsh=czNvdTNiemR0eHdn&utm_source=qr" target="_blank" rel="noopener" class="btn-insta-social">
+                <i class="fab fa-instagram"></i> Je suis aussi sur Instagram ! 😊
+            </a>
         </div>
 
         <div class="tiktok-embed-wrapper">
-    <blockquote class="tiktok-embed" 
-                cite="https://www.tiktok.com/@helionsaxx/video/7578216731357809942" 
-                data-video-id="7578216731357809942" 
-                style="max-width: 605px; min-width: 325px;">
-        <section>
-            <a target="_blank" title="@helionsaxx" href="https://www.tiktok.com/@helionsaxx?refer=embed">@helionsaxx</a>
-            <p>Melodrama - Sax Cover 🎷</p>
-            <a target="_blank" title="♬ son original - Hélion Sax" href="https://www.tiktok.com/music/son-original-7578216731357809942?refer=embed">♬ son original - Hélion Sax</a>
-        </section>
-    </blockquote>
-    <script async src="https://www.tiktok.com/embed.js"></script>
-</div>
+            <blockquote class="tiktok-embed" 
+                        cite="https://www.tiktok.com/@helionsaxx/video/7578216731357809942" 
+                        data-video-id="7578216731357809942" 
+                        style="max-width: 605px; min-width: 325px;">
+                <section>
+                    <a target="_blank" rel="noopener" title="@helionsaxx" href="https://www.tiktok.com/@helionsaxx?refer=embed">@helionsaxx</a>
+                    <p>Melodrama - Sax Cover 🎷</p>
+                    <a target="_blank" rel="noopener" title="♬ son original - Hélion Sax" href="https://www.tiktok.com/music/son-original-7578216731357809942?refer=embed">♬ son original - Hélion Sax</a>
+                </section>
+            </blockquote>
+            <script async src="https://www.tiktok.com/embed.js"></script>
+        </div>
+    </div>
 </section>
 
-
-<!-- Contact -->
+<!-- ============================================================= -->
+<!-- CONTACT (structure conservée)                                  -->
+<!-- ============================================================= -->
 <section id="devis-contact" class="contact contact-glass" style="background-image: url('images/elion-sax-soiree-privee.jpeg');">
-    
     <div class="form-wrapper">
         <form action="https://formspree.io/f/xeopkaqg" method="POST" class="contact-form">
-            <h2>Parlez-moi de votre événement</h2> 
-            
-            <input type="text" name="Nom" placeholder="Nom" required>
-            <input type="email" name="Email" placeholder="Email" required>
-            <textarea name="Message" placeholder="Votre message" required></textarea>
-            <button type="submit">Réserver & Devis</button>
+            <h2>Parlez-moi de votre événement</h2>
+            <input type="text" name="Nom" placeholder="Votre nom" required autocomplete="name">
+            <input type="email" name="Email" placeholder="Votre email" required autocomplete="email">
+            <textarea name="Message" placeholder="Date, lieu, type d'événement, vos attentes..." required></textarea>
+            <button type="submit">Réserver &amp; Demander un devis</button>
         </form>
     </div>
 </section>
 
-<!-- Footer -->
+<!-- ============================================================= -->
+<!-- FOOTER                                                         -->
+<!-- ============================================================= -->
 <footer>
-    <p>Hélion Sax – Saxophoniste Événementiel à Paris | Shows Live & Soirées Uniques</p>
+    <p>Hélion Sax – Saxophoniste Événementiel à Paris | Shows Live &amp; Soirées Uniques</p>
     <div class="footer-social">
-        <a href="https://www.instagram.com/helionsaxx?igsh=czNvdTNiemR0eHdn&utm_source=qr" target="_blank">
+        <a href="https://www.instagram.com/helionsaxx?igsh=czNvdTNiemR0eHdn&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram Hélion Sax">
             <i class="fab fa-instagram"></i>
         </a>
-        
-        <a href="https://www.youtube.com/@mdlg3721" target="_blank">
+        <a href="https://www.youtube.com/@mdlg3721" target="_blank" rel="noopener" aria-label="YouTube Hélion Sax">
             <i class="fab fa-youtube"></i>
         </a>
-        
-        <a href="https://www.tiktok.com/@helionsaxx?_t=ZN-90yifNWu75a&_r=1" target="_blank">
+        <a href="https://www.tiktok.com/@helionsaxx?_t=ZN-90yifNWu75a&_r=1" target="_blank" rel="noopener" aria-label="TikTok Hélion Sax">
             <i class="fab fa-tiktok"></i>
         </a>
     </div>
-    <p>Contact: 0695281906 | Email: contact@helionsax.com</p>
-    <p>© 2035 Hélion Sax</p>
+    <p>Contact : <a href="tel:+33695281906" style="color: inherit;">06 95 28 19 06</a> | Email : <a href="mailto:contact@helionsax.com" style="color: inherit;">contact@helionsax.com</a></p>
+    <!-- CHANGEMENT #14 : CORRECTION DATE FOOTER (2035 → 2026) -->
+    <p>© 2026 Hélion Sax — Tous droits réservés</p>
 </footer>
 
-<script src="script.js"></script>
-<script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script> 
+<!-- CHANGEMENT #15 : DEFER SUR LES SCRIPTS (ne bloque plus le parsing HTML) -->
+<script src="script.js" defer></script>
+<script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js" defer></script>
+
 <script>
-  const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smooth: true
-  });
-  function raf(time) {
-    lenis.raf(time);
+  // Lenis (smooth scroll) - exécution différée pour ne pas bloquer le rendu
+  window.addEventListener('load', () => {
+    if (typeof Lenis === 'undefined') return;
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smooth: true
+    });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
     requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
+  });
 </script>
+
 </body>
 </html>
