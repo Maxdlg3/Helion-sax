@@ -1106,20 +1106,35 @@ footer .footer-social a:hover { transform:scale(1.3); }
         text-align: center !important;
     }
 }
-
-/* ============================================================
-   COLLER CE BLOC À LA TOUTE FIN DE style.css
-   Menu de navigation principal — Hélion Sax
-   ============================================================ */
+/* ============ MENU DE NAVIGATION + CONTACT INFO ============ */
+/* Le contact-info devient une colonne : contacts en haut, nav en dessous */
+.contact-info {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
+.contact-info-line {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.contact-info-line a {
+    color: inherit;
+    text-decoration: none;
+}
+.contact-info-line i { color: #b8860b; }
 
 .main-nav {
-    flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 28px;
+    gap: 20px;
     color: white;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
@@ -1130,7 +1145,7 @@ footer .footer-social a:hover { transform:scale(1.3); }
     letter-spacing: 0.5px;
     transition: color 0.3s ease;
     position: relative;
-    padding: 5px 0;
+    padding: 3px 0;
     white-space: nowrap;
 }
 .main-nav a:hover { color: #d4af37; }
@@ -1138,21 +1153,24 @@ footer .footer-social a:hover { transform:scale(1.3); }
 .main-nav a.active::after {
     content: '';
     position: absolute;
-    bottom: -3px;
-    left: 0;
-    right: 0;
+    bottom: -2px;
+    left: 0; right: 0;
     height: 2px;
     background: #d4af37;
 }
+
+/* Mobile : contact + nav passent sous le logo comme avant */
 @media (max-width: 900px) {
-    .main-nav {
+    .contact-info {
         order: 2;
-        flex: 0 0 auto;
+        align-items: center;
         width: 100%;
+    }
+    .contact-info-line { font-size: 11px; }
+    .main-nav {
         justify-content: center;
-        gap: 10px;
+        gap: 8px;
         flex-wrap: wrap;
-        margin-top: 8px;
     }
     .main-nav a { font-size: 10px; }
 }
