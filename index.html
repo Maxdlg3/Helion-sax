@@ -58,9 +58,9 @@
 <link rel="dns-prefetch" href="https://www.tiktok.com">
 <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
 
-<!-- CHANGEMENT #8 : PRELOAD DE L'IMAGE HERO (LCP) -->
-<!-- Dit au navigateur : "charge cette image en priorité absolue, elle est critique". -->
-<link rel="preload" as="image" href="images/helion-sax-club-paris.jpeg" fetchpriority="high">
+<!-- PRELOAD IMAGE HERO (LCP) - responsive WebP/JPEG -->
+<link rel="preload" as="image" href="images/helion-sax-club-paris-800w.webp" fetchpriority="high" media="(max-width: 799px)">
+<link rel="preload" as="image" href="images/helion-sax-club-paris.jpeg" fetchpriority="high" media="(min-width: 800px)">
 
 <!-- FAVICON (inchangé) -->
 <link rel="icon" type="image/png" href="images/logo-affiche.png">
@@ -263,68 +263,6 @@
 </script>
 
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Hélion Sax",
-  "description": "Saxophoniste événementiel à Paris pour mariages, soirées privées et événements d'entreprise. Jazz, house, afro house, funk.",
-  "url": "https://helionsax.com/",
-  "telephone": "+33695281906",
-  "email": "contact@helionsax.com",
-  "image": "https://helionsax.com/images/logo-affiche.png",
-  "logo": "https://helionsax.com/images/logo.png",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Paris",
-    "addressRegion": "Île-de-France",
-    "addressCountry": "FR"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 48.8566,
-    "longitude": 2.3522
-  },
-  "areaServed": [
-    {"@type": "City", "name": "Paris", "containedInPlace": "Île-de-France"},
-    {"@type": "AdministrativeArea", "name": "Île-de-France"},
-    {"@type": "AdministrativeArea", "name": "Seine-et-Marne", "identifier": "77"},
-    {"@type": "AdministrativeArea", "name": "Yvelines", "identifier": "78"},
-    {"@type": "AdministrativeArea", "name": "Essonne", "identifier": "91"},
-    {"@type": "AdministrativeArea", "name": "Hauts-de-Seine", "identifier": "92"},
-    {"@type": "AdministrativeArea", "name": "Seine-Saint-Denis", "identifier": "93"},
-    {"@type": "AdministrativeArea", "name": "Val-de-Marne", "identifier": "94"},
-    {"@type": "AdministrativeArea", "name": "Val-d'Oise", "identifier": "95"},
-    {"@type": "City", "name": "Versailles"},
-    {"@type": "City", "name": "Fontainebleau"},
-    {"@type": "City", "name": "Saint-Germain-en-Laye"},
-    {"@type": "City", "name": "Rambouillet"},
-    {"@type": "AdministrativeArea", "name": "Normandie"},
-    {"@type": "Country", "name": "France"}
-  ],
-  "priceRange": "€€€",
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "09:00",
-    "closes": "23:00"
-  },
-  "sameAs": [
-    "https://www.instagram.com/helionsaxx",
-    "https://www.tiktok.com/@helionsaxx",
-    "https://www.youtube.com/@mdlg3721"
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Prestations de saxophone événementiel",
-    "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Saxophoniste pour mariage Paris"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Saxophoniste pour événement d'entreprise Paris"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Saxophoniste pour soirée privée Paris"}}
-    ]
-  }
-}
-</script>
 </head>
 <body>
 
@@ -404,12 +342,15 @@
     <!-- CHANGEMENT #12 : IMAGE HERO OPTIMISÉE LCP -->
     <!-- Avant : loading="lazy" (CATASTROPHIQUE pour l'élément principal du hero).
          Après : fetchpriority="high" pour dire à Google/Chrome "cette image est critique". -->
-    <img src="images/helion-sax-club-paris.jpeg"
-         alt="Hélion Sax, saxophoniste événementiel en live dans un club parisien"
-         fetchpriority="high"
-         decoding="async"
-         width="1920"
-         height="1080">
+    <picture>
+      <source srcset="images/helion-sax-club-paris-800w.webp" type="image/webp" media="(max-width: 799px)">
+      <img src="images/helion-sax-club-paris.jpeg"
+           alt="Hélion Sax, saxophoniste événementiel en live dans un club parisien"
+           fetchpriority="high"
+           decoding="async"
+           width="1920"
+           height="1080">
+    </picture>
   </div>
 </section>
 

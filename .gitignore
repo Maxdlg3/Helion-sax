@@ -1,0 +1,6 @@
+# Vidéos lourdes — héberger sur YouTube/Vimeo à la place
+images/*.mov
+images/*.mp4
+
+# Dépendances
+node_modules/

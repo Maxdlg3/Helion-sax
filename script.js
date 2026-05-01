@@ -205,7 +205,7 @@ const handlePreloader = () => {
     const preloader = document.getElementById('preloader');
     if (!preloader) return;
 
-    const MIN_VISIBLE = 1200;  // Durée mini pour qu'on voie l'anim du logo (en ms)
+    const MIN_VISIBLE = 800;   // Durée mini pour qu'on voie l'anim du logo (en ms)
     const MAX_VISIBLE = 2500;  // Jamais plus (sécurité)
     const startTime   = performance.now();
     let   hidden      = false;
