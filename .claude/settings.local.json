@@ -18,7 +18,12 @@
       "Bash(node scripts/update-html.js)",
       "Bash(npx cleancss *)",
       "Bash(npx terser *)",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(node scripts/update-html2.js)",
+      "Bash(node scripts/fix-fontawesome.js)",
+      "Bash(npm run *)"
     ]
   }
 }

@@ -68,15 +68,9 @@
 <link rel="apple-touch-icon" href="images/logo-affiche.png">
 
 <!-- FontAwesome (inchangé) -->
-<link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer" 
-/>
-
 <!-- CSS principal (inchangé) -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
 <link rel="stylesheet" href="style.css">
 
 <!-- Tailwind CDN : conservé pour l'instant pour ne rien casser.
@@ -286,7 +280,7 @@
     </div>
     <div class="logo-block">
         <div class="logo">
-            <a href="/"><img src="images/logo.png" alt="Logo Hélion Sax saxophoniste événementiel Paris"></a>
+            <a href="/"><picture><source srcset="images/logo-315.webp" type="image/webp"><img src="images/logo.png" alt="Logo Hélion Sax saxophoniste événementiel Paris"></picture></a>
         </div>
         <div class="contact-info">
             <i class="fas fa-phone"></i>
@@ -526,17 +520,14 @@
         </div>
 
         <div class="tiktok-embed-wrapper">
-            <blockquote class="tiktok-embed" 
-                        cite="https://www.tiktok.com/@helionsaxx/video/7578216731357809942" 
-                        data-video-id="7578216731357809942" 
-                        style="max-width: 605px; min-width: 325px;">
-                <section>
-                    <a target="_blank" rel="noopener" title="@helionsaxx" href="https://www.tiktok.com/@helionsaxx?refer=embed">@helionsaxx</a>
-                    <p>Melodrama - Sax Cover 🎷</p>
-                    <a target="_blank" rel="noopener" title="♬ son original - Hélion Sax" href="https://www.tiktok.com/music/son-original-7578216731357809942?refer=embed">♬ son original - Hélion Sax</a>
-                </section>
-            </blockquote>
-            <script async src="https://www.tiktok.com/embed.js"></script>
+            <div class="tiktok-lazy" data-videoid="7578216731357809942" role="button" tabindex="0" aria-label="Charger la vidéo TikTok Melodrama Sax Cover">
+                <div class="tiktok-lazy-inner">
+                    <div class="tiktok-lazy-play"><i class="fas fa-play"></i></div>
+                    <p class="tiktok-lazy-caption">Melodrama - Sax Cover 🎷</p>
+                    <p class="tiktok-lazy-handle">@helionsaxx</p>
+                    <p class="tiktok-lazy-hint">Cliquer pour charger la vidéo</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
