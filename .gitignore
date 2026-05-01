@@ -4,3 +4,10 @@ images/*.mp4
 
 # Dépendances
 node_modules/
+
+# Sources non-minifiées (garder localement, ne pas versionner)
+style.src.css
+script.src.js
+
+# DNS-prefetch inutile maintenant (Tailwind plus via CDN)
+

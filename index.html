@@ -53,14 +53,15 @@
 <!-- CHANGEMENT #7 : PRECONNECT AUX DOMAINES EXTERNES -->
 <!-- Prévient le navigateur qu'on va parler à ces serveurs → gain ~200-400ms sur le chargement. -->
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Playfair+Display:wght@400;600;700&display=swap">
 <link rel="preconnect" href="https://i.ytimg.com">
 <link rel="preconnect" href="https://www.youtube-nocookie.com">
 <link rel="dns-prefetch" href="https://www.tiktok.com">
-<link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
 
-<!-- PRELOAD IMAGE HERO (LCP) - responsive WebP/JPEG -->
-<link rel="preload" as="image" href="images/helion-sax-club-paris-800w.webp" fetchpriority="high" media="(max-width: 799px)">
-<link rel="preload" as="image" href="images/helion-sax-club-paris.jpeg" fetchpriority="high" media="(min-width: 800px)">
+<!-- PRELOAD IMAGE HERO (LCP) - WebP prioritaire -->
+<link rel="preload" as="image" href="images/helion-sax-club-paris.webp" fetchpriority="high">
 
 <!-- FAVICON (inchangé) -->
 <link rel="icon" type="image/png" href="images/logo-affiche.png">
@@ -80,7 +81,7 @@
 
 <!-- Tailwind CDN : conservé pour l'instant pour ne rien casser.
      NOTE : à remplacer par un build Tailwind compilé en Phase 2 (gain ~250Ko). -->
-<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/tailwind.css">
 
 
 <!-- ============================================================= -->
@@ -343,7 +344,7 @@
     <!-- Avant : loading="lazy" (CATASTROPHIQUE pour l'élément principal du hero).
          Après : fetchpriority="high" pour dire à Google/Chrome "cette image est critique". -->
     <picture>
-      <source srcset="images/helion-sax-club-paris-800w.webp" type="image/webp" media="(max-width: 799px)">
+      <source srcset="images/helion-sax-club-paris.webp" type="image/webp">
       <img src="images/helion-sax-club-paris.jpeg"
            alt="Hélion Sax, saxophoniste événementiel en live dans un club parisien"
            fetchpriority="high"
@@ -419,7 +420,10 @@
 
         <div class="client-slide">
       <div class="client-photo">
-        <img src="images/client-helion.jpeg" alt="Avis Antoine Event Planner saxophoniste club parisien Hélion Sax" loading="lazy" decoding="async">
+        <picture>
+          <source srcset="images/client-helion.webp" type="image/webp">
+          <img src="images/client-helion.jpeg" alt="Avis Antoine Event Planner saxophoniste club parisien Hélion Sax" loading="lazy" decoding="async">
+        </picture>
       </div>
       <div class="client-content">
         <p class="client-quote">« Je connais Hélion Sax depuis plusieurs années et je lui fais entièrement confiance pour mes événements. Je l'ai produit sur de nombreux events à Paris, sur des péniches et dans des clubs comme La Java ou Le Solum, et à chaque fois, sa prestation a été impeccable. »</p>
@@ -429,7 +433,10 @@
 
     <div class="client-slide active">
       <div class="client-photo">
-        <img src="images/mariage.jfif" alt="Avis mariage Marion et Charles saxophoniste Hélion Sax" loading="lazy" decoding="async">
+        <picture>
+          <source srcset="images/mariage.webp" type="image/webp">
+          <img src="images/mariage.jpg" alt="Avis mariage Marion et Charles saxophoniste Hélion Sax" loading="lazy" decoding="async">
+        </picture>
       </div>
       <div class="client-content">
         <p class="client-quote">« Hélion Sax a vraiment marqué notre mariage. Il a su créer une ambiance magique, douce au début puis festive quand la soirée a commencé. Tous nos invités nous en ont parlé ensuite. En plus d'être très pro, il dégage une vraie énergie positive, on sent qu'il aime ce qu'il fait. »</p>
@@ -439,7 +446,10 @@
 
     <div class="client-slide">
       <div class="client-photo">
-        <img src="images/Client.png" alt="Avis Christian Epiceum saxophoniste séminaire entreprise Hélion Sax" loading="lazy" decoding="async">
+        <picture>
+          <source srcset="images/client.webp" type="image/webp">
+          <img src="images/Client.png" alt="Avis Christian Epiceum saxophoniste séminaire entreprise Hélion Sax" loading="lazy" decoding="async">
+        </picture>
       </div>
       <div class="client-content">
         <p class="client-quote">« Hélion Sax a apporté une belle ambiance à notre séminaire, avec une atmosphère harmonieuse. Les collaborateurs ont beaucoup apprécié sa prestation. »</p>
@@ -534,7 +544,7 @@
 <!-- ============================================================= -->
 <!-- CONTACT (structure conservée)                                  -->
 <!-- ============================================================= -->
-<section id="devis-contact" class="contact contact-glass" style="background-image: url('images/elion-sax-soiree-privee.jpeg');">
+<section id="devis-contact" class="contact contact-glass" style="background-image: url('images/elion-sax-soiree-privee.jpeg'); background-image: image-set(url('images/elion-sax-soiree-privee.webp') type('image/webp'), url('images/elion-sax-soiree-privee.jpeg') type('image/jpeg'));">
     <div class="form-wrapper">
         <form action="https://formspree.io/f/xeopkaqg" method="POST" class="contact-form">
             <h2>Parlez-moi de votre événement</h2>

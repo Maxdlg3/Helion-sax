@@ -1,0 +1,19 @@
+{
+  "name": "helionsax",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:tailwind": "npx @tailwindcss/cli -i src/input.css -o tailwind.css --minify",
+    "build:css": "npx cleancss -o style.css style.src.css",
+    "build:js": "npx terser script.src.js -o script.js --compress --mangle",
+    "build:webp": "node scripts/convert-webp.js",
+    "build": "npm run build:tailwind && npm run build:css && npm run build:js"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.4",
+    "clean-css-cli": "^5.6.3",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^4.0.0",
+    "terser": "^5.46.2"
+  }
+}
