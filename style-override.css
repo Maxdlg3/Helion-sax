@@ -1,0 +1,190 @@
+/* ============================================================
+   HELION SAX — Style Override
+   Améliore la typographie et l'esthétique sans toucher
+   au contenu HTML ni aux balises SEO.
+   Chargé après style.css pour prendre le dessus.
+============================================================ */
+
+/* ---- POLICES ---- */
+/* Inter remplace Arial pour le corps du texte */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 300;
+}
+
+/* Cormorant Garamond remplace Playfair Display partout */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+/* ---- HERO H1 ---- */
+.hero-content h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(3rem, 7.5vw, 6rem) !important;
+  font-weight: 300 !important;
+  letter-spacing: -0.02em !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+}
+
+.hero-content h1 .gold {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.hero-subtitle {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-style: italic !important;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem) !important;
+  font-weight: 300 !important;
+  letter-spacing: 0 !important;
+  opacity: 0.9;
+}
+
+.hero-description {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.75 !important;
+  opacity: 0.8;
+}
+
+/* ---- SUPPRIMER LE CADRE luxury-frame ---- */
+.luxury-frame {
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* ---- BOUTON PRINCIPAL ---- */
+.btn-reserve {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.8rem !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 1px solid rgba(212, 175, 55, 0.55) !important;
+  border-radius: 2px !important;
+  color: #d4af37 !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  padding: 14px 36px !important;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.btn-reserve:hover {
+  background: #b8860b !important;
+  background-image: none !important;
+  border-color: #b8860b !important;
+  color: #0a0a0a !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 8px 24px rgba(184, 134, 11, 0.3) !important;
+}
+
+/* ---- TITRES DE SECTIONS ---- */
+.section-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(2.5rem, 5vw, 4rem) !important;
+  font-weight: 300 !important;
+  text-transform: none !important;
+  letter-spacing: -0.015em !important;
+  line-height: 1.1 !important;
+}
+
+/* ---- TITRES VIBE ---- */
+.vibe-text h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(1.7rem, 3vw, 2.4rem) !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.15 !important;
+}
+
+/* ---- PAGE HÉROS (sous-pages) ---- */
+.page-hero h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(2.5rem, 6vw, 5rem) !important;
+  font-weight: 300 !important;
+  letter-spacing: -0.02em !important;
+  text-transform: none !important;
+  line-height: 1.05 !important;
+}
+
+.page-hero .subtitle {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.8 !important;
+}
+
+/* ---- MENU DRAWER ---- */
+.menu-drawer nav a {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 1.6rem !important;
+  font-weight: 300 !important;
+  letter-spacing: 0 !important;
+}
+
+/* ---- CONTACT FORM ---- */
+.contact-form h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(2rem, 4vw, 3rem) !important;
+  font-weight: 300 !important;
+  letter-spacing: -0.015em !important;
+}
+
+/* ---- CLIENTS / TEMOIGNAGES ---- */
+.clients-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(2rem, 4vw, 3rem) !important;
+  font-weight: 300 !important;
+  text-transform: none !important;
+  letter-spacing: -0.01em !important;
+}
+
+.client-quote {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 1.3rem !important;
+  font-weight: 300 !important;
+  line-height: 1.8 !important;
+}
+
+.client-name {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.06em !important;
+}
+
+/* ---- TIKTOK SECTION ---- */
+.tiktok-subtitle {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem) !important;
+  font-style: italic !important;
+  font-weight: 300 !important;
+}
+
+/* ---- INLINE PLAYFAIR → CORMORANT (mariage page, etc.) ---- */
+[style*="Playfair Display"] {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+}
+
+/* ---- FOOTER ---- */
+footer {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+footer .footer-social a {
+  transition: transform 0.25s ease, color 0.25s ease;
+}
