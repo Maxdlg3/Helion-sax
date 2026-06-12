@@ -301,7 +301,6 @@ h1, h2, h3, h4, h5, h6 {
 
   /* Cache les éléments inutiles sur desktop */
   .top-bar.topbar-pages .social-icons { display: none !important; }
-  .top-bar.topbar-pages .logo-block .contact-info { display: none !important; }
   .burger-btn { display: none !important; }
 
   /* Logo compact à gauche */
