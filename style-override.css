@@ -178,6 +178,112 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Cormorant Garamond', Georgia, serif !important;
 }
 
+/* ---- FAQ <details> ---- */
+#faq details {
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(184, 134, 11, 0.2) !important;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+#faq details:first-of-type {
+  border-top: 1px solid rgba(184, 134, 11, 0.2) !important;
+}
+
+#faq details summary {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(1.1rem, 2vw, 1.3rem) !important;
+  font-weight: 400 !important;
+  color: #38241a !important;
+  cursor: pointer;
+  padding: 1.4rem 0 !important;
+  list-style: none;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 1rem;
+}
+
+#faq details summary::-webkit-details-marker { display: none; }
+
+#faq details summary::after {
+  content: '+';
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #b8860b;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+#faq details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+#faq details p {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 0.9rem !important;
+  font-weight: 300 !important;
+  line-height: 1.85 !important;
+  color: #5a4a3a !important;
+  padding: 0 0 1.4rem 0 !important;
+  margin-top: 0 !important;
+}
+
+/* ---- BOUTON FORMULAIRE DE CONTACT ---- */
+.contact-form button[type="submit"] {
+  background: transparent !important;
+  background-image: none !important;
+  border: 1px solid rgba(212, 175, 55, 0.55) !important;
+  border-radius: 2px !important;
+  color: #f1e1b5 !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  padding: 14px 36px !important;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+.contact-form button[type="submit"]:hover {
+  background: #b8860b !important;
+  background-image: none !important;
+  border-color: #b8860b !important;
+  color: #0a0a0a !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 8px 24px rgba(184, 134, 11, 0.3) !important;
+}
+
+/* ---- BOUTON INSTAGRAM / SOCIAL ---- */
+.btn-insta-social {
+  background: transparent !important;
+  background-image: none !important;
+  border: 1px solid rgba(212, 175, 55, 0.45) !important;
+  border-radius: 2px !important;
+  color: #38241a !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 0.82rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.1em !important;
+  padding: 13px 28px !important;
+  box-shadow: none !important;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+.btn-insta-social:hover {
+  background: #b8860b !important;
+  background-image: none !important;
+  border-color: #b8860b !important;
+  color: #fff !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 20px rgba(184,134,11,0.25) !important;
+  filter: none !important;
+}
+
 /* ---- FOOTER ---- */
 footer {
   font-family: 'Inter', system-ui, sans-serif;
