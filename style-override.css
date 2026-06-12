@@ -284,6 +284,79 @@ h1, h2, h3, h4, h5, h6 {
   filter: none !important;
 }
 
+/* ---- NAVIGATION DESKTOP ---- */
+.desktop-nav { display: none; }
+
+@media (min-width: 901px) {
+  /* Restructure le header en row propre */
+  .top-bar.topbar-pages {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 80px !important;
+    min-height: 80px !important;
+    padding: 0 40px !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Cache les éléments inutiles sur desktop */
+  .top-bar.topbar-pages .social-icons { display: none !important; }
+  .top-bar.topbar-pages .logo-block .contact-info { display: none !important; }
+  .burger-btn { display: none !important; }
+
+  /* Logo compact à gauche */
+  .top-bar.topbar-pages .logo-block { order: 1; flex-shrink: 0; }
+  .top-bar.topbar-pages .logo-block .logo img { height: 52px !important; }
+
+  /* Nav à droite */
+  .desktop-nav {
+    display: flex !important;
+    align-items: center;
+    gap: 0;
+    order: 2;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .desktop-nav a {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    padding: 0.5rem 0.8rem;
+    text-decoration: none;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+
+  .desktop-nav a:hover { color: #fff; }
+  .desktop-nav a.active { color: #d4af37; }
+
+  .desktop-nav .desktop-nav-cta {
+    color: #d4af37;
+    border: 1px solid rgba(212,175,55,0.4);
+    border-radius: 2px;
+    padding: 0.5rem 1.2rem;
+    margin-left: 0.6rem;
+    transition: background 0.25s, color 0.25s, border-color 0.25s;
+  }
+
+  .desktop-nav .desktop-nav-cta:hover {
+    background: #b8860b;
+    border-color: #b8860b;
+    color: #0a0a0a !important;
+  }
+
+  /* Scrolled */
+  .top-bar.topbar-pages.scrolled {
+    height: 64px !important;
+    min-height: 64px !important;
+  }
+  .top-bar.topbar-pages.scrolled .logo-block .logo img { height: 40px !important; }
+}
+
 /* ---- FOOTER ---- */
 footer {
   font-family: 'Inter', system-ui, sans-serif;
