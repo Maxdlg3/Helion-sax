@@ -325,29 +325,170 @@
     </div>
 </aside>
 <!-- ============================================================= -->
-<!-- HERO SECTION                                                   -->
+<!-- HERO SECTION - le saxophone qui s'assemble au scroll           -->
+<!-- Remplace l'ancien hero photo statique. Le H1 garde exactement  -->
+<!-- les memes mots-cles SEO (CHANGEMENT #11 d'origine), seul le    -->
+<!-- traitement visuel change. Texte visible des le chargement (pas -->
+<!-- masque derriere l'animation), l'assemblage du sax est un bonus -->
+<!-- visuel en parallele, pas une condition pour lire le contenu.   -->
+<!-- Desktop uniquement : sur mobile et prefers-reduced-motion, le  -->
+<!-- sax s'affiche deja assemble, sans scroll-jack.                 -->
 <!-- ============================================================= -->
-<section class="hero-luxe">
-  <div class="hero-content">
-    <div class="luxury-frame">
-      <!-- CHANGEMENT #11 : H1 AVEC MOTS-CLÉS STRATÉGIQUES -->
-      <!-- Avant : "Hélion Sax - L'élégance du Sax pour vos événements" (0 mot-clé).
-           Après : le mot-clé principal "Saxophoniste Mariage & Événementiel à Paris"
-           est dans le H1, tout en gardant le branding Hélion Sax en sous-titre. -->
-      <h1>Saxophoniste Événementiel à <span class="gold">Paris</span></h1>
-    </div>
-    <p class="hero-subtitle">
-      Hélion Sax: l'élégance du saxophone live pour vos mariages, soirées privées et événements d'entreprise.
-    </p>
-    <p class="hero-description">
-      Du Caveau de la Huchette aux péniches parisiennes, passé par La France a un Incroyable Talent.
-    </p>
-    <a href="#devis-contact" class="btn-reserve">Demander un devis</a>
-  </div>
-  <div class="hero-image">
-    <!-- CHANGEMENT #12 : IMAGE HERO OPTIMISÉE LCP -->
-    <!-- Avant : loading="lazy" (CATASTROPHIQUE pour l'élément principal du hero).
-         Après : fetchpriority="high" pour dire à Google/Chrome "cette image est critique". -->
+<style>
+.sax-hero{
+  --sh-ink:#0B0A0C;
+  --sh-brass:#C6883D;
+  --sh-brass-light:#E8C27E;
+  --sh-brass-dim:#7A5A26;
+  --sh-pearl:#F3ECDD;
+  --sh-text-dim:#B9AEB2;
+  background:var(--sh-ink);
+  position:relative;
+  /* pas d'overflow:hidden ici : ca casse position:sticky des descendants */
+}
+.sh-bg{position:absolute; inset:0; z-index:0;}
+.sh-bg picture, .sh-bg img{
+  width:100%; height:100%; object-fit:cover; object-position:center 30%; display:block;
+}
+.sh-bg-overlay{
+  position:absolute; inset:0;
+  background:
+    linear-gradient(100deg, rgba(11,10,12,0.78) 0%, rgba(11,10,12,0.5) 38%, rgba(11,10,12,0.16) 68%, rgba(11,10,12,0.42) 100%),
+    linear-gradient(0deg, rgba(11,10,12,0.55) 0%, rgba(11,10,12,0.02) 30%, rgba(11,10,12,0.02) 70%, rgba(11,10,12,0.7) 100%);
+}
+.sax-hero .sh-grid{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 clamp(20px,5vw,64px);
+  display:grid;
+  grid-template-columns:1fr;
+}
+@media (min-width:900px){
+  .sax-hero .sh-grid{grid-template-columns:1fr 1fr; align-items:center;}
+}
+.sh-text{
+  position:relative;
+  z-index:2;
+  padding:clamp(120px,20vh,180px) 0 40px;
+  opacity:0;
+  transform:translateY(14px);
+  animation:shFadeIn .9s ease .15s forwards;
+}
+@keyframes shFadeIn{ to{ opacity:1; transform:translateY(0); } }
+.sh-eyebrow{
+  font-family:'Inter',sans-serif;
+  font-size:0.72rem;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--sh-brass-light);
+  display:block;
+  margin-bottom:18px;
+}
+.sax-hero h1{
+  font-family:'Cormorant Garamond', Georgia, serif;
+  font-weight:300;
+  font-size:clamp(2.4rem,7.5vw,5rem);
+  line-height:1;
+  letter-spacing:-0.02em;
+  text-transform:none;
+  color:#fff;
+  margin:0;
+  text-wrap:balance;
+  overflow-wrap:break-word;
+  max-width:100%;
+}
+.sax-hero h1 .gold{color:#d4af37; font-style:italic; font-weight:300;}
+.sh-subtitle{
+  font-family:'Cormorant Garamond', Georgia, serif;
+  font-style:italic;
+  font-weight:300;
+  opacity:0.9;
+  margin:22px 0 0;
+  max-width:48ch;
+  font-size:clamp(1.1rem,2vw,1.5rem);
+  line-height:1.5;
+  color:var(--sh-text-dim);
+}
+.sh-cta{
+  display:inline-block;
+  margin-top:32px;
+  padding:16px 34px;
+  border:1.5px solid var(--sh-brass);
+  color:var(--sh-brass-light);
+  text-decoration:none;
+  font-family:'Inter',sans-serif;
+  font-size:0.82rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  border-radius:2px;
+  transition:background .25s ease, color .25s ease;
+}
+.sh-cta:hover{background:var(--sh-brass); color:var(--sh-ink);}
+
+/* ---- sax stage / scroll assembly (desktop) ----
+   Scroll naturel de la page (window), pas de conteneur overflow:auto
+   imbrique : plus fiable pour le vrai scroll souris/trackpad. */
+.sh-pin-outer{position:relative; height:170vh;}
+.sh-pin-inner{
+  /* position pilotee en JS (fixed/absolute/static) : position:sticky
+     ne s'accroche pas sur ce site, cf. overflow-x:hidden!important sur
+     html,body qui casse la propagation du scroll pour sticky. */
+  position:static;
+  top:0; height:100vh;
+  width:100%;
+  display:flex; align-items:center; justify-content:center;
+}
+.sh-pin-inner.sh-fixed{position:fixed; left:0;}
+.sh-pin-inner.sh-bottom{position:absolute; top:auto; bottom:0; left:0;}
+.sh-stage{
+  position:relative;
+  width:100%;
+  min-height:60vh;
+  overflow:hidden;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+}
+@media (min-width:900px){
+  .sh-stage{padding-top:110px;}
+}
+.sh-glow{
+  position:absolute; width:60vmin; height:60vmin; border-radius:50%;
+  background:radial-gradient(circle, rgba(198,136,61,0.16), transparent 68%);
+  pointer-events:none;
+}
+.sh-sax-wrap{position:relative; width:min(46vh,58vw,340px); aspect-ratio:340/700;}
+.sh-sax-wrap svg{width:100%; height:100%; overflow:visible;}
+.sh-key{transform-box:fill-box; transform-origin:center;}
+.sh-scroll-cue{
+  position:absolute; bottom:6%; left:50%; transform:translateX(-50%);
+  font-family:'Inter',sans-serif; font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase;
+  color:var(--sh-text-dim); display:flex; flex-direction:column; align-items:center; gap:10px;
+}
+.sh-scroll-cue .sh-line{ width:1px; height:30px; background:linear-gradient(to bottom, var(--sh-brass-light), transparent); animation:shCue 1.6s ease-in-out infinite; }
+@keyframes shCue{ 0%,100%{transform:scaleY(1); opacity:.9;} 50%{transform:scaleY(.5); opacity:.4;} }
+
+/* mobile : meme mecanique d'assemblage au scroll qu'en desktop, juste un
+   parcours de scroll un peu plus court (texte + sax empiles sur une colonne) */
+@media (max-width:899px){
+  .sh-pin-outer{height:220vh;}
+  .sh-pin-inner{align-items:flex-start;}
+  .sh-text{padding-top:100px; padding-bottom:10px;}
+  .sh-stage{padding-top:10px; min-height:40vh;}
+  /* texte pose directement sur la photo (pas de colonne separee) : plus de contraste */
+  .sh-bg-overlay{
+    background:linear-gradient(180deg, rgba(11,10,12,0.74) 0%, rgba(11,10,12,0.52) 50%, rgba(11,10,12,0.22) 72%, rgba(11,10,12,0.58) 100%);
+  }
+}
+@media (prefers-reduced-motion: reduce){
+  .sh-text{animation:none; opacity:1; transform:none;}
+  .sh-scroll-cue .sh-line{animation:none;}
+}
+</style>
+
+<section class="sax-hero">
+  <div class="sh-bg">
     <picture>
       <source srcset="images/helion-sax-club-paris.webp" type="image/webp">
       <img src="images/helion-sax-club-paris.jpeg"
@@ -357,8 +498,185 @@
            width="1920"
            height="1080">
     </picture>
+    <div class="sh-bg-overlay"></div>
   </div>
+  <div class="sh-pin-outer" id="shPinOuter">
+    <div class="sh-pin-inner">
+      <div class="sh-grid">
+        <div class="sh-text">
+            <span class="sh-eyebrow">Hélion Sax</span>
+            <!-- CHANGEMENT #11 (conserve) : mot-cle principal dans le H1 -->
+            <h1>Saxophoniste Événementiel à <span class="gold">Paris</span></h1>
+            <p class="sh-subtitle">L'élégance du saxophone live pour vos mariages, soirées privées et événements d'entreprise. Du Caveau de la Huchette aux péniches parisiennes, passé par La France a un Incroyable Talent.</p>
+            <a href="#devis-contact" class="sh-cta">Demander un devis</a>
+          </div>
+
+          <div class="sh-stage">
+            <div class="sh-glow"></div>
+            <div class="sh-sax-wrap">
+              <svg viewBox="0 0 340 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="shBrassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8a6a2e"/>
+                    <stop offset="45%" stop-color="#E8C27E"/>
+                    <stop offset="75%" stop-color="#B9832F"/>
+                    <stop offset="100%" stop-color="#8a6a2e"/>
+                  </linearGradient>
+                </defs>
+                <path id="shTubePath"
+                  d="M 300 34
+                     C 296 52, 286 62, 272 72
+                     C 250 88, 232 100, 226 122
+                     C 220 150, 224 220, 224 300
+                     C 224 360, 224 420, 226 460
+                     C 227 480, 222 496, 205 508
+                     C 195 515, 188 516, 182 512"
+                  stroke="url(#shBrassGrad)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+                <path id="shBellPath"
+                  d="M 200 505
+                     C 165 480, 112 402, 96 328
+                     C 116 337, 138 346, 146 351
+                     C 166 391, 196 440, 219 471
+                     C 213 486, 207 497, 200 505 Z"
+                  fill="url(#shBrassGrad)" opacity="0"/>
+                <g id="shKeys">
+                  <circle class="sh-key" data-i="0" cx="238" cy="140" r="8" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
+                  <circle class="sh-key" data-i="1" cx="220" cy="172" r="9" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
+                  <circle class="sh-key" data-i="2" cx="236" cy="206" r="7" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
+                  <circle class="sh-key" data-i="3" cx="222" cy="240" r="9" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
+                  <circle class="sh-key" data-i="4" cx="237" cy="276" r="7" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
+                  <circle class="sh-key" data-i="5" cx="221" cy="312" r="10" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
+                  <circle class="sh-key" data-i="6" cx="236" cy="350" r="7" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
+                  <circle class="sh-key" data-i="7" cx="219" cy="386" r="9" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
+                  <circle class="sh-key" data-i="8" cx="235" cy="422" r="7" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
+                  <circle class="sh-key" data-i="9" cx="219" cy="456" r="9" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
+                  <circle class="sh-key" data-i="10" cx="187" cy="497" r="11" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
+                  <circle class="sh-key" data-i="11" cx="165" cy="520" r="9" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
+                  <circle class="sh-key" data-i="12" cx="150" cy="500" r="7" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="sh-scroll-cue" id="shScrollCue"><span>Scroll</span><span class="sh-line"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
 </section>
+
+<script>
+(function(){
+  var mq = window.matchMedia('(max-width: 899px)');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var pinOuter = document.getElementById('shPinOuter');
+  var pinInner = pinOuter ? pinOuter.querySelector('.sh-pin-inner') : null;
+  var tubePath = document.getElementById('shTubePath');
+  var bellPath = document.getElementById('shBellPath');
+  var scrollCue = document.getElementById('shScrollCue');
+  var keys = Array.prototype.slice.call(document.querySelectorAll('.sh-key'));
+
+  function updateDbg(){}
+
+  if (!pinOuter || !tubePath) { updateDbg('ABORT: missing element'); return; }
+
+  function setStatic(){
+    tubePath.style.strokeDasharray = 'none';
+    tubePath.style.strokeDashoffset = 0;
+    bellPath.style.opacity = 1;
+    bellPath.style.transform = 'none';
+    keys.forEach(function(k){ k.style.opacity = 1; k.style.transform = 'none'; });
+    if (scrollCue) scrollCue.style.display = 'none';
+    updateDbg('STATIC MODE (mobile or reduced-motion)');
+  }
+
+  if (reduceMotion){
+    setStatic();
+    return;
+  }
+
+  var tubeLen = tubePath.getTotalLength();
+  tubePath.style.strokeDasharray = tubeLen;
+
+  var rand = function(seed){ var x = Math.sin(seed * 999.7) * 10000; return x - Math.floor(x); };
+  var keyData = keys.map(function(k, i){
+    var angle = rand(i * 3.1) * Math.PI * 2;
+    var dist = 80 + rand(i * 7.7) * 120;
+    return {
+      el: k,
+      dx: Math.cos(angle) * dist,
+      dy: Math.sin(angle) * dist,
+      rot: (rand(i * 5.3) - 0.5) * 240,
+      start: 0.42 + (i / keys.length) * 0.4,
+      end: 0.52 + (i / keys.length) * 0.4
+    };
+  });
+
+  function clamp(v,a,b){ return Math.max(a, Math.min(b, v)); }
+  function progressIn(p, a, b){ return clamp((p - a) / (b - a), 0, 1); }
+  function ease(t){ return t*t*(3 - 2*t); }
+
+  function render(p){
+    var tubeP = ease(progressIn(p, 0, 0.26));
+    tubePath.style.strokeDashoffset = tubeLen * (1 - tubeP);
+
+    var bellP = ease(progressIn(p, 0.2, 0.4));
+    bellPath.style.opacity = bellP;
+    bellPath.style.transform = 'translate(' + (10 * (1 - bellP)) + 'px,' + (10 * (1 - bellP)) + 'px)';
+
+    keyData.forEach(function(k){
+      var kp = ease(progressIn(p, k.start, k.end));
+      k.el.style.opacity = kp;
+      k.el.style.transform = 'translate(' + (k.dx * (1 - kp)) + 'px,' + (k.dy * (1 - kp)) + 'px) rotate(' + (k.rot * (1 - kp)) + 'deg)';
+    });
+
+    if (scrollCue) scrollCue.style.opacity = 1 - ease(progressIn(p, 0, 0.06));
+    updateDbg('render p=' + p.toFixed(3));
+  }
+
+  function updatePin(rect){
+    if (!pinInner) return;
+    if (rect.top > 0){
+      pinInner.classList.remove('sh-fixed', 'sh-bottom');
+    } else if (rect.bottom > window.innerHeight){
+      pinInner.classList.add('sh-fixed');
+      pinInner.classList.remove('sh-bottom');
+    } else {
+      pinInner.classList.remove('sh-fixed');
+      pinInner.classList.add('sh-bottom');
+    }
+  }
+
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var rect = pinOuter.getBoundingClientRect();
+      updatePin(rect);
+      var total = pinOuter.offsetHeight - window.innerHeight;
+      var scrolled = -rect.top;
+      var p = total > 0 ? clamp(scrolled / total, 0, 1) : 1;
+      render(p);
+      updateDbg('onScroll, window.scrollY=' + Math.round(window.scrollY) + ' p=' + p.toFixed(3) + ' pinClass=' + (pinInner ? pinInner.className : 'none'));
+      ticking = false;
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+
+  // Le site utilise Lenis (scroll fluide) : le scroll natif est mis a jour
+  // par Lenis, mais on s'accroche aussi a son propre evenement 'scroll'
+  // (recommande avec Lenis) des qu'il est pret, pour rester synchro.
+  function hookLenis(){
+    if (window.lenis && window.lenis.on) window.lenis.on('scroll', onScroll);
+  }
+  if (window.lenis) hookLenis();
+  else window.addEventListener('lenisready', hookLenis, {once:true});
+
+  updatePin(pinOuter.getBoundingClientRect());
+  render(0);
+})();
+</script>
 
 <!-- ============================================================= -->
 <!-- VIBE SECTION (structure conservée, textes enrichis SEO)       -->
@@ -602,6 +920,8 @@
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smooth: true
     });
+    window.lenis = lenis; // expose pour les scripts de page (hero anime, etc.)
+    window.dispatchEvent(new Event('lenisready'));
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
