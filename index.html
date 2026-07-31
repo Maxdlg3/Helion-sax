@@ -472,8 +472,8 @@
 /* mobile : pas de sax anime, ca fait trop charge sur petit ecran.
    Juste le texte sur la photo, comme un hero classique. */
 @media (max-width:899px){
-  .sh-pin-outer{height:auto;}
-  .sh-pin-inner{position:static; height:auto;}
+  .sh-pin-outer{height:auto; min-height:100vh;}
+  .sh-pin-inner{position:static; height:auto; min-height:100vh;}
   .sh-stage{display:none;}
   .sh-text{padding-top:100px; padding-bottom:60px;}
   /* texte pose directement sur la photo (pas de colonne separee) : plus de contraste */
