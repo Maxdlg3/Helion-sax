@@ -325,156 +325,29 @@
     </div>
 </aside>
 <!-- ============================================================= -->
-<!-- HERO SECTION - le saxophone qui s'assemble au scroll           -->
-<!-- Remplace l'ancien hero photo statique. Le H1 garde exactement  -->
-<!-- les memes mots-cles SEO (CHANGEMENT #11 d'origine), seul le    -->
-<!-- traitement visuel change. Texte visible des le chargement (pas -->
-<!-- masque derriere l'animation), l'assemblage du sax est un bonus -->
-<!-- visuel en parallele, pas une condition pour lire le contenu.   -->
-<!-- Desktop uniquement : sur mobile et prefers-reduced-motion, le  -->
-<!-- sax s'affiche deja assemble, sans scroll-jack.                 -->
+<!-- HERO SECTION                                                   -->
 <!-- ============================================================= -->
-<style>
-.sax-hero{
-  --sh-ink:#0B0A0C;
-  --sh-brass:#C6883D;
-  --sh-brass-light:#E8C27E;
-  --sh-brass-dim:#7A5A26;
-  --sh-pearl:#F3ECDD;
-  --sh-text-dim:#B9AEB2;
-  background:var(--sh-ink);
-  position:relative;
-  overflow:hidden;
-}
-.sh-bg{position:absolute; inset:0; z-index:0;}
-.sh-bg picture, .sh-bg img{
-  width:100%; height:100%; object-fit:cover; object-position:center 30%; display:block;
-}
-.sh-bg-overlay{
-  position:absolute; inset:0;
-  background:
-    linear-gradient(100deg, rgba(11,10,12,0.78) 0%, rgba(11,10,12,0.5) 38%, rgba(11,10,12,0.16) 68%, rgba(11,10,12,0.42) 100%),
-    linear-gradient(0deg, rgba(11,10,12,0.55) 0%, rgba(11,10,12,0.02) 30%, rgba(11,10,12,0.02) 70%, rgba(11,10,12,0.7) 100%);
-}
-.sax-hero .sh-grid{
-  position:relative;
-  z-index:2;
-  max-width:1280px;
-  margin:0 auto;
-  padding:0 clamp(20px,5vw,64px);
-  display:grid;
-  grid-template-columns:1fr;
-  min-height:100vh;
-}
-@media (min-width:900px){
-  .sax-hero .sh-grid{grid-template-columns:1fr 1fr; align-items:center;}
-}
-.sh-text{
-  position:relative;
-  z-index:2;
-  padding:clamp(120px,20vh,180px) 0 40px;
-  opacity:0;
-  transform:translateY(14px);
-  animation:shFadeIn .9s ease .15s forwards;
-}
-@keyframes shFadeIn{ to{ opacity:1; transform:translateY(0); } }
-.sh-eyebrow{
-  font-family:'Inter',sans-serif;
-  font-size:0.72rem;
-  letter-spacing:0.22em;
-  text-transform:uppercase;
-  color:var(--sh-brass-light);
-  display:block;
-  margin-bottom:18px;
-}
-.sax-hero h1{
-  font-family:'Poppins','Inter',sans-serif;
-  font-weight:600;
-  font-size:clamp(2rem,4.6vw,3rem);
-  line-height:1.25;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:#fff;
-  margin:0;
-  text-wrap:balance;
-}
-.sax-hero h1 .gold{color:var(--sh-brass-light);}
-.sh-subtitle{
-  margin:22px 0 0;
-  max-width:44ch;
-  font-family:'Inter',sans-serif;
-  font-size:1.05rem;
-  line-height:1.7;
-  color:var(--sh-text-dim);
-}
-.sh-cta{
-  display:inline-block;
-  margin-top:32px;
-  padding:16px 34px;
-  border:1.5px solid var(--sh-brass);
-  color:var(--sh-brass-light);
-  text-decoration:none;
-  font-family:'Inter',sans-serif;
-  font-size:0.82rem;
-  letter-spacing:0.08em;
-  text-transform:uppercase;
-  border-radius:2px;
-  transition:background .25s ease, color .25s ease;
-}
-.sh-cta:hover{background:var(--sh-brass); color:var(--sh-ink);}
-
-/* ---- sax stage / scroll assembly (desktop) ---- */
-.sh-viewport{
-  position:relative;
-  height:100vh;
-  overflow-y:auto;
-  overflow-x:hidden;
-  -webkit-overflow-scrolling:touch;
-  scrollbar-width:none;
-}
-.sh-viewport::-webkit-scrollbar{display:none;}
-.sh-pin-outer{position:relative; height:170vh;}
-.sh-pin-inner{
-  position:sticky; top:0; height:100vh;
-  display:flex; align-items:center; justify-content:center;
-  overflow:hidden;
-}
-.sh-stage{position:relative; width:min(80vw,520px); height:70%; display:flex; align-items:center; justify-content:center;}
-.sh-glow{
-  position:absolute; width:60vmin; height:60vmin; border-radius:50%;
-  background:radial-gradient(circle, rgba(198,136,61,0.16), transparent 68%);
-  pointer-events:none;
-}
-.sh-sax-wrap{position:relative; width:min(46vh,58vw,340px); aspect-ratio:340/700;}
-.sh-sax-wrap svg{width:100%; height:100%; overflow:visible;}
-.sh-key{transform-box:fill-box; transform-origin:center;}
-.sh-scroll-cue{
-  position:absolute; bottom:6%; left:50%; transform:translateX(-50%);
-  font-family:'Inter',sans-serif; font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase;
-  color:var(--sh-text-dim); display:flex; flex-direction:column; align-items:center; gap:10px;
-}
-.sh-scroll-cue .sh-line{ width:1px; height:30px; background:linear-gradient(to bottom, var(--sh-brass-light), transparent); animation:shCue 1.6s ease-in-out infinite; }
-@keyframes shCue{ 0%,100%{transform:scaleY(1); opacity:.9;} 50%{transform:scaleY(.5); opacity:.4;} }
-
-/* mobile / reduced-motion: fully assembled, no pin, no scroll-jack */
-@media (max-width:899px){
-  .sh-viewport{height:auto; overflow:visible; padding:20px 0 60px;}
-  .sh-pin-outer{height:auto;}
-  .sh-pin-inner{position:static; height:auto;}
-  .sh-scroll-cue{display:none;}
-  /* texte pose directement sur la photo (pas de colonne separee) : plus de contraste */
-  .sh-bg-overlay{
-    background:linear-gradient(180deg, rgba(11,10,12,0.86) 0%, rgba(11,10,12,0.68) 50%, rgba(11,10,12,0.4) 72%, rgba(11,10,12,0.75) 100%);
-  }
-}
-@media (prefers-reduced-motion: reduce){
-  .sh-text{animation:none; opacity:1; transform:none;}
-  .sh-scroll-cue .sh-line{animation:none;}
-}
-</style>
-
-<section class="sax-hero">
-  <div class="sh-bg">
+<section class="hero-luxe">
+  <div class="hero-content">
+    <div class="luxury-frame">
+      <!-- CHANGEMENT #11 : H1 AVEC MOTS-CLÉS STRATÉGIQUES -->
+      <!-- Avant : "Hélion Sax - L'élégance du Sax pour vos événements" (0 mot-clé).
+           Après : le mot-clé principal "Saxophoniste Mariage & Événementiel à Paris"
+           est dans le H1, tout en gardant le branding Hélion Sax en sous-titre. -->
+      <h1>Saxophoniste Événementiel à <span class="gold">Paris</span></h1>
+    </div>
+    <p class="hero-subtitle">
+      Hélion Sax: l'élégance du saxophone live pour vos mariages, soirées privées et événements d'entreprise.
+    </p>
+    <p class="hero-description">
+      Du Caveau de la Huchette aux péniches parisiennes, passé par La France a un Incroyable Talent.
+    </p>
+    <a href="#devis-contact" class="btn-reserve">Demander un devis</a>
+  </div>
+  <div class="hero-image">
+    <!-- CHANGEMENT #12 : IMAGE HERO OPTIMISÉE LCP -->
+    <!-- Avant : loading="lazy" (CATASTROPHIQUE pour l'élément principal du hero).
+         Après : fetchpriority="high" pour dire à Google/Chrome "cette image est critique". -->
     <picture>
       <source srcset="images/helion-sax-club-paris.webp" type="image/webp">
       <img src="images/helion-sax-club-paris.jpeg"
@@ -484,154 +357,8 @@
            width="1920"
            height="1080">
     </picture>
-    <div class="sh-bg-overlay"></div>
-  </div>
-  <div class="sh-grid">
-    <div class="sh-text">
-      <span class="sh-eyebrow">Hélion Sax</span>
-      <!-- CHANGEMENT #11 (conserve) : mot-cle principal dans le H1 -->
-      <h1>Saxophoniste Événementiel à <span class="gold">Paris</span></h1>
-      <p class="sh-subtitle">L'élégance du saxophone live pour vos mariages, soirées privées et événements d'entreprise. Du Caveau de la Huchette aux péniches parisiennes, passé par La France a un Incroyable Talent.</p>
-      <a href="#devis-contact" class="sh-cta">Demander un devis</a>
-    </div>
-
-    <div class="sh-viewport" id="shViewport">
-      <div class="sh-pin-outer" id="shPinOuter">
-        <div class="sh-pin-inner">
-          <div class="sh-stage">
-            <div class="sh-glow"></div>
-            <div class="sh-sax-wrap">
-              <svg viewBox="0 0 340 700" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="shBrassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#8a6a2e"/>
-                    <stop offset="45%" stop-color="#E8C27E"/>
-                    <stop offset="75%" stop-color="#B9832F"/>
-                    <stop offset="100%" stop-color="#8a6a2e"/>
-                  </linearGradient>
-                </defs>
-                <path id="shTubePath"
-                  d="M 300 34
-                     C 296 52, 286 62, 272 72
-                     C 250 88, 232 100, 226 122
-                     C 220 150, 224 220, 224 300
-                     C 224 360, 224 420, 226 460
-                     C 227 480, 222 496, 205 508
-                     C 195 515, 188 516, 182 512"
-                  stroke="url(#shBrassGrad)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
-                <path id="shBellPath"
-                  d="M 200 505
-                     C 165 480, 112 402, 96 328
-                     C 116 337, 138 346, 146 351
-                     C 166 391, 196 440, 219 471
-                     C 213 486, 207 497, 200 505 Z"
-                  fill="url(#shBrassGrad)" opacity="0"/>
-                <g id="shKeys">
-                  <circle class="sh-key" data-i="0" cx="238" cy="140" r="8" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
-                  <circle class="sh-key" data-i="1" cx="220" cy="172" r="9" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
-                  <circle class="sh-key" data-i="2" cx="236" cy="206" r="7" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
-                  <circle class="sh-key" data-i="3" cx="222" cy="240" r="9" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
-                  <circle class="sh-key" data-i="4" cx="237" cy="276" r="7" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
-                  <circle class="sh-key" data-i="5" cx="221" cy="312" r="10" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
-                  <circle class="sh-key" data-i="6" cx="236" cy="350" r="7" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
-                  <circle class="sh-key" data-i="7" cx="219" cy="386" r="9" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
-                  <circle class="sh-key" data-i="8" cx="235" cy="422" r="7" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
-                  <circle class="sh-key" data-i="9" cx="219" cy="456" r="9" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
-                  <circle class="sh-key" data-i="10" cx="187" cy="497" r="11" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
-                  <circle class="sh-key" data-i="11" cx="165" cy="520" r="9" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
-                  <circle class="sh-key" data-i="12" cx="150" cy="500" r="7" fill="#F3ECDD" stroke="#8a6a2e" stroke-width="2"/>
-                </g>
-              </svg>
-            </div>
-            <div class="sh-scroll-cue" id="shScrollCue"><span>Scroll</span><span class="sh-line"></span></div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
-
-<script>
-(function(){
-  var mq = window.matchMedia('(max-width: 899px)');
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var viewport = document.getElementById('shViewport');
-  var pinOuter = document.getElementById('shPinOuter');
-  var tubePath = document.getElementById('shTubePath');
-  var bellPath = document.getElementById('shBellPath');
-  var scrollCue = document.getElementById('shScrollCue');
-  var keys = Array.prototype.slice.call(document.querySelectorAll('.sh-key'));
-  if (!viewport || !tubePath) return;
-
-  function setStatic(){
-    tubePath.style.strokeDasharray = 'none';
-    tubePath.style.strokeDashoffset = 0;
-    bellPath.style.opacity = 1;
-    bellPath.style.transform = 'none';
-    keys.forEach(function(k){ k.style.opacity = 1; k.style.transform = 'none'; });
-    if (scrollCue) scrollCue.style.display = 'none';
-  }
-
-  if (reduceMotion || mq.matches){
-    setStatic();
-    return;
-  }
-
-  var tubeLen = tubePath.getTotalLength();
-  tubePath.style.strokeDasharray = tubeLen;
-
-  var rand = function(seed){ var x = Math.sin(seed * 999.7) * 10000; return x - Math.floor(x); };
-  var keyData = keys.map(function(k, i){
-    var angle = rand(i * 3.1) * Math.PI * 2;
-    var dist = 80 + rand(i * 7.7) * 120;
-    return {
-      el: k,
-      dx: Math.cos(angle) * dist,
-      dy: Math.sin(angle) * dist,
-      rot: (rand(i * 5.3) - 0.5) * 240,
-      start: 0.42 + (i / keys.length) * 0.4,
-      end: 0.52 + (i / keys.length) * 0.4
-    };
-  });
-
-  function clamp(v,a,b){ return Math.max(a, Math.min(b, v)); }
-  function progressIn(p, a, b){ return clamp((p - a) / (b - a), 0, 1); }
-  function ease(t){ return t*t*(3 - 2*t); }
-
-  function render(p){
-    var tubeP = ease(progressIn(p, 0, 0.26));
-    tubePath.style.strokeDashoffset = tubeLen * (1 - tubeP);
-
-    var bellP = ease(progressIn(p, 0.2, 0.4));
-    bellPath.style.opacity = bellP;
-    bellPath.style.transform = 'translate(' + (10 * (1 - bellP)) + 'px,' + (10 * (1 - bellP)) + 'px)';
-
-    keyData.forEach(function(k){
-      var kp = ease(progressIn(p, k.start, k.end));
-      k.el.style.opacity = kp;
-      k.el.style.transform = 'translate(' + (k.dx * (1 - kp)) + 'px,' + (k.dy * (1 - kp)) + 'px) rotate(' + (k.rot * (1 - kp)) + 'deg)';
-    });
-
-    if (scrollCue) scrollCue.style.opacity = 1 - ease(progressIn(p, 0, 0.06));
-  }
-
-  var ticking = false;
-  function onScroll(){
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(function(){
-      var total = pinOuter.offsetHeight - viewport.clientHeight;
-      var p = total > 0 ? clamp(viewport.scrollTop / total, 0, 1) : 1;
-      render(p);
-      ticking = false;
-    });
-  }
-
-  viewport.addEventListener('scroll', onScroll, {passive:true});
-  window.addEventListener('resize', onScroll);
-  render(0);
-})();
-</script>
 
 <!-- ============================================================= -->
 <!-- VIBE SECTION (structure conservée, textes enrichis SEO)       -->
