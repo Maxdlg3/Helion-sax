@@ -367,3 +367,22 @@ footer {
 footer .footer-social a {
   transition: transform 0.25s ease, color 0.25s ease;
 }
+
+/* ---- HERO : mention Helion Events ---- */
+.sh-events-note {
+  margin-top: 16px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--sh-text-dim);
+  text-shadow: 0 1px 8px rgba(0,0,0,0.6);
+  max-width: 40ch;
+}
+.sh-events-note strong { color: var(--sh-brass-light); font-weight: 600; }
+.sh-events-note a {
+  color: var(--sh-brass-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+.sh-events-note a:hover { color: var(--sh-brass); }
