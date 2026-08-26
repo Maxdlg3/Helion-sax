@@ -236,5 +236,19 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://helionsax.com/blog/saxophone-percussions-afro-house-entreprise/</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Article blog : afro house mariage -->
+  <url>
+    <loc>https://helionsax.com/blog/saxophone-percussions-afro-house-mariage/</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
 </urlset>
