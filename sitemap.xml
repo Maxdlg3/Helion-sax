@@ -199,6 +199,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Article blog : Ile-de-France (nouveau, comble le trou de contenu departements IDF) -->
+  <url>
+    <loc>https://helionsax.com/blog/saxophoniste-mariage-ile-de-france/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Article blog : guide choix -->
   <url>
     <loc>https://helionsax.com/blog/comment-choisir-saxophoniste-mariage/</loc>
