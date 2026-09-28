@@ -66,30 +66,8 @@
   </url>
 
   <!-- Pages locales villes -->
-  <url>
-    <loc>https://helionsax.com/saxophoniste-lyon/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://helionsax.com/saxophoniste-bordeaux/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://helionsax.com/saxophoniste-marseille/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://helionsax.com/saxophoniste-lille/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- lyon/bordeaux/marseille/lille retirees du sitemap le 2026-09-29 : redirigees (meta refresh + canonical)
+       vers leur article de blog respectif, qui performait deja mieux et etait cannibalise par ces pages fines. -->
   <url>
     <loc>https://helionsax.com/saxophoniste-beaune/</loc>
     <lastmod>2026-07-15</lastmod>
@@ -198,27 +176,27 @@
   </url>
   <url>
     <loc>https://helionsax.com/blog/saxophoniste-mariage-lyon/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://helionsax.com/blog/saxophoniste-mariage-bordeaux/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://helionsax.com/blog/saxophoniste-mariage-marseille/</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://helionsax.com/blog/saxophoniste-mariage-lille/</loc>
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <!-- Article blog : guide choix -->
