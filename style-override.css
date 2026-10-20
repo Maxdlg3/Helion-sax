@@ -420,3 +420,12 @@ footer .footer-social a {
   .cta-fresh > div { justify-content: center !important; }
   .cta-fresh::after { grid-column: 1; margin: 18px 24px 34px; white-space: normal; }
 }
+
+/* Encart "devis" dans les articles du blog (remplace le degrade brun/or illisible) */
+body .cta-inline { background: linear-gradient(135deg, #fffaf2 0%, #f6ead6 100%); color: #3a2b1f; border: 1px solid rgba(184,134,11,0.28); border-left: 4px solid #b8860b; border-radius: 16px; padding: 32px 36px; text-align: left; margin: 44px 0; box-shadow: 0 10px 30px rgba(56,36,26,0.08); }
+body .cta-inline h3 { color: #38241a !important; margin-top: 0 !important; font-family: 'Playfair Display', serif; }
+body .cta-inline p { color: #5c3a21; opacity: 1 !important; }
+body .cta-inline p a { display: inline; background: none !important; padding: 0 !important; margin: 0 !important; border-radius: 0; color: #8a6806 !important; font-weight: 600; text-decoration: underline !important; text-underline-offset: 3px; transform: none !important; }
+body .cta-inline > a { display: inline-block; background: #38241a; color: #f6e7c8 !important; padding: 13px 28px; border-radius: 10px; text-decoration: none !important; font-weight: 600; letter-spacing: 0.5px; margin-top: 12px; box-shadow: 0 8px 20px rgba(56,36,26,0.22); transition: transform .2s, background .2s; }
+body .cta-inline > a:hover { background: #4a3122; color: #fff !important; transform: translateY(-2px); }
+@media (max-width: 600px) { body .cta-inline { padding: 26px 22px; text-align: center; border-left-width: 1px; border-top: 4px solid #b8860b; } }
