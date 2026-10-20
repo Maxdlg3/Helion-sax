@@ -243,4 +243,16 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://helionsax.com/blog/mariage-abbaye-des-vaux-de-cernay-musique/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://helionsax.com/blog/violoniste-ou-saxophoniste-mariage/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

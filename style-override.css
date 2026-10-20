@@ -429,3 +429,9 @@ body .cta-inline p a { display: inline; background: none !important; padding: 0 
 body .cta-inline > a { display: inline-block; background: #38241a; color: #f6e7c8 !important; padding: 13px 28px; border-radius: 10px; text-decoration: none !important; font-weight: 600; letter-spacing: 0.5px; margin-top: 12px; box-shadow: 0 8px 20px rgba(56,36,26,0.22); transition: transform .2s, background .2s; }
 body .cta-inline > a:hover { background: #4a3122; color: #fff !important; transform: translateY(-2px); }
 @media (max-width: 600px) { body .cta-inline { padding: 26px 22px; text-align: center; border-left-width: 1px; border-top: 4px solid #b8860b; } }
+
+/* Articles du blog : bandeau cadre sur le saxophone, portrait complet dans le texte */
+@media (max-width: 760px) { .page-hero-bg.hero-crop-low { background-position: 50% 100% !important; } }
+.article-portrait { float: right; width: 260px; margin: 6px 0 20px 30px; }
+.article-portrait img { display: block; width: 100%; height: auto; border-radius: 14px; box-shadow: 0 12px 30px rgba(56,36,26,0.18); }
+@media (max-width: 700px) { .article-portrait { float: none; width: 100%; max-width: 360px; margin: 10px auto 24px; } }
