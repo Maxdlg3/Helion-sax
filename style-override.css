@@ -396,3 +396,27 @@ footer .footer-social a {
 .case-row { display: flex; gap: 14px; align-items: flex-start; }
 .case-row img { flex-basis: 0; min-width: 0; width: 100%; height: auto; display: block; border-radius: 10px; box-shadow: 0 6px 20px rgba(56,36,26,0.12); background: #e9e1d6; }
 @media (max-width: 600px) { .case-gallery { display: block; columns: 2; column-gap: 8px; width: auto; left: auto; transform: none; } .case-row-narrow { width: auto; } .case-row { display: contents; } .case-row img { width: 100%; margin-bottom: 8px; break-inside: avoid; } }
+
+/* Bloc d'appel au devis en bas de page (remplace l'ancien bandeau noir) */
+.cta-fresh { display: grid; grid-template-columns: minmax(240px, 36%) 1fr; max-width: 1080px; margin: 70px auto; border-radius: 28px; overflow: hidden; background: linear-gradient(135deg, #fffaf2 0%, #f6ead6 55%, #efdcbc 100%); border: 1px solid rgba(184,134,11,0.28); box-shadow: 0 18px 50px rgba(56,36,26,0.14); color: #38241a; text-align: left; }
+.cta-fresh::before { content: ''; grid-column: 1; grid-row: 1 / span 8; min-height: 380px; background: url('/images/ritz-arendt-medernach/saxophoniste-live-cocktail-ritz-700.webp') 60% 30% / cover no-repeat; }
+.cta-fresh > * { grid-column: 2; margin-left: 56px !important; margin-right: 56px !important; max-width: none !important; }
+.cta-fresh > h2 { padding-top: 56px; color: #38241a; }
+.cta-fresh > h2::after { content: ''; display: block; width: 56px; height: 3px; margin-top: 16px; border-radius: 2px; background: linear-gradient(90deg, #b8860b, #e8c27e); }
+.cta-fresh > p { color: #5c3a21; opacity: 1 !important; }
+.cta-fresh > a.btn-reserve { justify-self: start; }
+.cta-fresh .btn-reserve { background: #38241a !important; color: #f6e7c8 !important; border: 1px solid #38241a !important; box-shadow: 0 10px 24px rgba(56,36,26,0.25); }
+.cta-fresh .btn-reserve:hover { background: #4a3122 !important; color: #fff !important; }
+.cta-fresh > div { justify-content: flex-start !important; }
+.cta-fresh a[href^="tel:"] { color: #7a5a1e !important; border-color: #b8860b !important; background: rgba(255,255,255,0.55); }
+.cta-fresh::after { content: '★★★★★   5/5 sur Google  ·  Sans engagement'; grid-column: 2; margin: 22px 56px 52px; font-size: 0.85rem; letter-spacing: 0.5px; color: #8a6a2e; white-space: pre; }
+@media (max-width: 760px) {
+  .cta-fresh { grid-template-columns: 1fr; margin: 40px 16px; border-radius: 22px; text-align: center; }
+  .cta-fresh::before { grid-column: 1; grid-row: 1; min-height: 230px; background-position: 60% 25%; }
+  .cta-fresh > * { grid-column: 1; margin-left: 24px !important; margin-right: 24px !important; }
+  .cta-fresh > h2 { padding-top: 30px; font-size: 1.7rem !important; }
+  .cta-fresh > h2::after { margin-left: auto; margin-right: auto; }
+  .cta-fresh > a.btn-reserve { justify-self: center; }
+  .cta-fresh > div { justify-content: center !important; }
+  .cta-fresh::after { grid-column: 1; margin: 18px 24px 34px; white-space: normal; }
+}
