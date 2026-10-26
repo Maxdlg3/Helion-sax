@@ -1,6 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<!-- Google tag (gtag.js) + consentement -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  var hsConsent = null;
+  try { hsConsent = localStorage.getItem('hs-consent'); } catch (e) {}
+  gtag('consent', 'default', {
+    analytics_storage: hsConsent === 'granted' ? 'granted' : 'denied',
+    ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-5MG5B9E9RX');
+  if (!hsConsent) {
+    document.addEventListener('DOMContentLoaded', function () {
+      var b = document.createElement('div');
+      b.setAttribute('role', 'dialog');
+      b.setAttribute('aria-label', 'Cookies');
+      b.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;max-width:520px;margin:0 auto;z-index:9999;background:#0a0a0a;color:#f5efe6;border:1px solid #b8860b;border-radius:8px;padding:14px 16px;font:14px/1.5 Inter,system-ui,sans-serif;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;box-shadow:0 8px 30px rgba(0,0,0,.35)';
+      b.innerHTML = '<span style="flex:1 1 240px">Ce site mesure son audience avec Google Analytics. <a href="/politique-de-confidentialite/" style="color:#d4af37">En savoir plus</a></span>'
+        + '<span style="display:flex;gap:8px"><button type="button" data-c="denied" style="background:none;border:1px solid #f5efe6;color:#f5efe6;padding:7px 14px;border-radius:4px;cursor:pointer;font:inherit">Refuser</button>'
+        + '<button type="button" data-c="granted" style="background:#b8860b;border:0;color:#0a0a0a;padding:7px 14px;border-radius:4px;cursor:pointer;font:inherit;font-weight:600">Accepter</button></span>';
+      b.addEventListener('click', function (e) {
+        var c = e.target.getAttribute && e.target.getAttribute('data-c');
+        if (!c) return;
+        try { localStorage.setItem('hs-consent', c); } catch (err) {}
+        gtag('consent', 'update', { analytics_storage: c });
+        b.remove();
+      });
+      document.body.appendChild(b);
+    });
+  }
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5MG5B9E9RX"></script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Politique de confidentialité | Hélion Sax</title>
@@ -94,7 +128,8 @@
   <p>Vous pouvez également introduire une réclamation auprès de la <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>.</p>
 
   <h2>7. Cookies</h2>
-  <p>Ce site n'utilise pas de cookies de traçage ni de cookies publicitaires. Les vidéos YouTube et TikTok sont chargées à la demande (clic) afin de limiter les cookies tiers.</p>
+  <p>Ce site utilise Google Analytics (Google Ireland Limited) pour mesurer son audience : pages consultées, provenance des visites, type d'appareil. Ces cookies de mesure ne sont déposés qu'après votre accord, donné via le bandeau affiché lors de votre première visite. Si vous refusez, aucun cookie Google Analytics n'est déposé. Vous pouvez revenir sur votre choix à tout moment en effaçant les données de ce site dans votre navigateur. Les données sont conservées 14 mois.</p>
+  <p>Ce site n'utilise pas de cookies publicitaires. Les vidéos YouTube et TikTok sont chargées à la demande (clic) afin de limiter les cookies tiers.</p>
 
   <h2>8. Hébergement</h2>
   <p>Ce site est hébergé par <strong>GitHub Pages</strong> (GitHub Inc. / Microsoft Corporation, 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis).</p>
