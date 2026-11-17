@@ -331,6 +331,14 @@
             <li><strong>Un style pensé pour le lieu</strong> : tenue sobre et moderne, en accord avec l'un des palaces les plus emblématiques de Paris.</li>
         </ul>
 
+        <div class="ritz-reel" id="ritz-reel">
+            <video loop playsinline preload="none" poster="/images/ritz-arendt-medernach/reel-poster.jpg" aria-label="Vidéo de la soirée des 10 ans d'Arendt &amp; Medernach au Ritz Paris : saxophone live et DJ">
+                <source src="/videos/ritz-arendt-medernach-reel.mp4" type="video/mp4">
+            </video>
+            <button class="ritz-reel-play" type="button" aria-label="Lire la vidéo avec le son"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+        </div>
+        <p class="ritz-reel-caption">La soirée en vidéo : du cocktail dans le jardin au duo saxophone et DJ dans le Salon d'Été.</p>
+
         <div class="case-gallery">
             <div class="case-row">
                 <img style="flex-grow: 1.499;" src="/images/ritz-arendt-medernach/saxophone-dj-live-salon-ritz-700.webp" srcset="/images/ritz-arendt-medernach/saxophone-dj-live-salon-ritz-700.webp 700w, /images/ritz-arendt-medernach/saxophone-dj-live-salon-ritz.webp 1400w" sizes="(max-width: 600px) 50vw, 700px" width="700" height="467" loading="lazy" decoding="async" alt="Duo saxophoniste et DJ pour soirée d'entreprise : Hélion Sax au saxophone devant la régie DJ, dans le Salon d'Été du Ritz Paris">
@@ -439,6 +447,22 @@
         bg.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
     });
 })();
+</script>
+<style>
+.ritz-reel{position:relative;width:100%;max-width:340px;aspect-ratio:9/16;margin:36px auto 0;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 20px 50px rgba(0,0,0,.18)}
+.ritz-reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;cursor:pointer}
+.ritz-reel-play{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;display:flex;align-items:center;justify-content:center;padding:0 0 0 4px;cursor:pointer;background:rgba(20,15,10,.5);color:#fff;border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:opacity .35s,transform .35s,color .3s,border-color .3s}
+.ritz-reel-play svg{width:30px;height:30px}
+.ritz-reel-play:hover,.ritz-reel-play:focus-visible{color:#c9a84c;border-color:#c9a84c;transform:scale(1.06);outline:none}
+.ritz-reel.is-playing .ritz-reel-play{opacity:0;pointer-events:none}
+.ritz-reel-caption{text-align:center;font-size:.9rem;color:#6b5a48;margin:14px auto 28px;max-width:520px}
+</style>
+<script>
+(function(){var p=document.getElementById("ritz-reel");if(!p)return;var v=p.querySelector("video"),b=p.querySelector(".ritz-reel-play");
+v.addEventListener("play",function(){p.classList.add("is-playing")});v.addEventListener("pause",function(){p.classList.remove("is-playing")});
+b.addEventListener("click",function(){v.muted=false;v.play().catch(function(){})});
+v.addEventListener("click",function(){if(v.paused)v.play().catch(function(){});else v.pause()});
+if("IntersectionObserver" in window){new IntersectionObserver(function(e){e.forEach(function(x){if(!x.isIntersecting&&!v.paused)v.pause()})},{threshold:.2}).observe(p)}})();
 </script>
 </body>
 </html>
